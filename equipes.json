@@ -17,9 +17,24 @@
       "pays" : "corée du sud ",
 
       "entraineur": "Shin Tae-Yong "
-    }
+    },
+  
+    {
+      "pays": "Espagne",
+      "entraîneur": "Ernesto VALVERDE"
   
   
+  },  
+   
+  {   "pays":"Maroc",
+      "entraîneur": "Hervé Renard" 
+  
+  },
+  
+  {   "pays":"Panama",
+      "entraîneur": "Hernan Dario Gomez"   
+  
+  }
   
 ]
 
