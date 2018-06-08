@@ -18,6 +18,29 @@
 
       "entraineur": "Shin Tae-Yong "
     },
+  
+    {
+  
+        "pays": "Nigeria",
+    
+        "entraineur": "Gernot Rohr",
+        "flag": "https://commons.wikimedia.org/wiki/File:Flag_of_Nigeria.svg#/media/File:Flag_of_Nigeria.svg"
+    
+      },
+    
+      {
+        "pays" : "Bresil ",
+  
+        "entraineur": "Tite",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
+      },
+      
+      {
+        "pays" : "Pologne",
+        "entraineur" : "Adam Nawałka ",
+        "flag": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland.svg#/media/File:Flag_of_Poland.svg"
+      },
+  
     {
       "pays" : "Arabie Saoudite",
 
@@ -44,6 +67,6 @@
         "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
     }
   
-  
+       
 ]
 
