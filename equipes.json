@@ -2,6 +2,11 @@
     {
         "pays": "angleterre",
         "entraineur": "Gareth southgate"
+      "id": 1,
+      "pays": "angleterre",
+      "entraineur": "Gareth southgate",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png"
+  
     },
     {
         "pays": "uruguay",
@@ -20,3 +25,36 @@
         "entraineur": " Bert VAN MARWIJK "
     }
 ]
+      "pays" : "corée du sud ",
+
+      "entraineur": "Shin Tae-Yong "
+    },
+    {
+      "pays" : "Arabie Saoudite",
+
+      "entraineur": "Juan Antonio Pizzi"
+    },
+    {
+      "pays" : "Iran",
+
+      "entraineur": "Carlos Queiroz"
+    },
+    {
+        "pays" : "Serbie ",
+  
+        "entraineur": "Mladen Krstajić",
+
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg"
+    },
+  
+    {
+        "pays" : "Allemagne ",
+  
+        "entraineur": "Joachim Löw",
+
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
+    }
+  
+  
+]
+
