@@ -17,18 +17,18 @@ Vos sources de données doivent être au format JSON.
 
 - En terme de gestion de projet :
 
-Réfléchir collectivement à une structure pour le fichier json.
-Chaque apprenant doit compléter un fichier json commun sur le repo git du formateur.
-Identifier les tâches à faire.
-Partager les tâches entre les apprenants.
+* Identifier les tâches à éfféctuer.
+* Réfléchir collectivement à une structure pour le fichier json.
+* Chaque apprenant doit ajouter au moins 1 entrée dans le fichier JSON, qui va contenir la liste des équipes.
+* Partager les tâches entre les apprenants.
 
 - En terme de production :
 
-/!\ Travailler collaborativement sur le code avec git.
-Avoir un code simple et efficace.
-Avoir un code commenté.
-Mettre à jour le README avec une partie "TODO"
-Chaque qui complète une tâche doit la marquer comme "Terminé" dans le README.
+/!\ Travailler collaborativement sur le code avec git (notions : fork, pull request).
+* Avoir un code simple et efficace.
+* Avoir un code commenté.
+* Mettre à jour le README avec une partie "TODO".
+* Chaque qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
 ###
 # TODO : 
