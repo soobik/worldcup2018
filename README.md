@@ -37,7 +37,7 @@ Vos sources de données doivent être au format JSON.
 * Récolter les informations sur les équipes. [NOT OK]
 * Liste des equipes : 
 * Angleterre : pascal [NOT OK]
-* Russie : jennifer [NOT OK]
+* Russie : jennifer [OK]
 * Egypte : jean-fred [NOT OK]
 * Arabie Saoudite : adama[NOT OK]
 * Uruguay : pascal [NOT OK]
@@ -50,7 +50,7 @@ Vos sources de données doivent être au format JSON.
 * Perou : alisson [NOT OK]
 * Danemark : alisson [NOT OK]
 * Argentine : idriss [NOT OK]
-* Islande : jennifer[NOT OK]
+* Islande : jennifer[OK]
 * Croatie : idriss [NOT OK]
 * Nigeria : badrane [NOT OK]
 * Bresil : badrane[NOT OK]
