@@ -21,12 +21,16 @@
     {
       "pays" : "Arabie Saoudite",
 
-      "entraineur": "Juan Antonio Pizzi"
+      "entraineur": "Juan Antonio Pizzi",
+      
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
     },
     {
       "pays" : "Iran",
 
-      "entraineur": "Carlos Queiroz"
+      "entraineur": "Carlos Queiroz",
+
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
     }
   
   
