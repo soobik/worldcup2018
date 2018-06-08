@@ -29,7 +29,7 @@ Vos sources de données doivent être au format JSON.
 * Avoir un code commenté.
 * Dans le code différencier l'affichage du traitement.
 * Mettre à jour le README avec une partie "TODO".
-* Chaque qui complète une tâche doit la marquer comme "Terminé" dans le README.
+* Chaque apprenant qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
 ###
 # TODO : 
