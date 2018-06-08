@@ -17,8 +17,24 @@
       "pays" : "corée du sud ",
 
       "entraineur": "Shin Tae-Yong "
+    },
+   
+    {
+      "pays" : "Egypte",
+
+      "entraineur": "Héctor Cúper"
+    },    
+    {
+      "pays" : "Portugal",
+
+      "entraineur": "Fernando Santos"
+    },
+    
+    {
+      "pays" : "Belgique",
+
+      "entraineur": "Roberto Martínez Montoliú"
     }
-  
   
   
 ]
