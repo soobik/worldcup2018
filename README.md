@@ -54,10 +54,17 @@ Vos sources de données doivent être au format JSON.
 * Croatie : idriss [NOT OK]
 * Nigeria : badrane [NOT OK]
 * Bresil : badrane[NOT OK]
+<<<<<<< HEAD
+* Suisse : alexandre[OK]
+* Costa Rica : alexandre [OK]
+* Serbie : anna [NOT OK]
+* Allemagne : anna [NOT OK]
+=======
 * Suisse : alexandre[NOT OK]
 * Costa Rica : alexandre [NOT OK]
 * Serbie : anna [OK]
 * Allemagne : anna [OK]
+>>>>>>> worldcup2018/master
 * Mexique : nova [NOT OK]
 * Suede : nova [NOT OK]
 * Corée du sud : pascal [NOT OK]
@@ -67,6 +74,6 @@ Vos sources de données doivent être au format JSON.
 * Pologne : badrane [NOT OK]
 * Senegal : adama[NOT OK]
 * Colombie : allison [NOT OK]
-* Japon : alexandre [NOT OK]
+* Japon : alexandre [OK]
 
 * Alimenter ce TODO. [NOT OK]

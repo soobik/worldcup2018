@@ -18,6 +18,27 @@
 
       "entraineur": "Shin Tae-Yong "
     },
+
+    {
+        "id" : 1,
+        "pays" : "japon",
+        "entraineur" : "Akira Nishino",
+        "flag" : "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
+    },
+
+    {
+        "id" : 1,
+        "pays" : "costa rica",
+        "entraineur" : "Oscar Ramírez",
+        "flag" : "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
+    },
+
+    {
+        "id" : 1,
+        "pays" : "suisse",
+        "entraineur" : "Vladimir Petković",
+        "flag" : "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg"
+    },
     {
       "pays" : "Arabie Saoudite",
 
