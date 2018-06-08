@@ -27,6 +27,7 @@ Vos sources de données doivent être au format JSON.
 /!\ Travailler collaborativement sur le code avec git (notions : fork, pull request).
 * Avoir un code simple et efficace.
 * Avoir un code commenté.
+* Dans le code différencier l'affichage du traitement.
 * Mettre à jour le README avec une partie "TODO".
 * Chaque qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
