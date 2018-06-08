@@ -17,6 +17,24 @@
       "pays" : "corée du sud ",
 
       "entraineur": "Shin Tae-Yong "
+    },
+
+    {
+        "pays" : "japon",
+
+        "entraineur" : "Akira Nishino"
+    },
+
+    {
+        "pays" : "costa rica",
+
+        "entraineur" : "Oscar Ramírez"
+    },
+    
+    {
+        "pays" : "suisse",
+
+        "entraineur" : "Vladimir Petković"
     }
   
   
