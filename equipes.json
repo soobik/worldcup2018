@@ -44,6 +44,8 @@
         "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
     },
     {
+        "id": 2,
+
         "pays" : "mexique ",
 
         "entraineur": "Juan Carlos OSORIO ",
@@ -51,6 +53,8 @@
         "flag" : "https://www.google.com/search?q=drapeau+mexique&client=ubuntu&hs=06a&channel=fs&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjE0c-D38PbAhWGt1kKHcwlCCUQ_AUICigB&biw=1920&bih=922#imgrc=XmjeGJ1BYnJ-QM:"
     },
     {
+        "id": 3,
+
         "pays" : "suède ",
   
         "entraineur": "Janne ANDERSON ",
