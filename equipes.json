@@ -1,3 +1,34 @@
-{
+[
+    {
+      "id": 1,
+      "pays": "angleterre",
+      "entraineur": "Gareth southgate",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png",
+  
+    },
+  
+    {
+      "pays" : "uruguay",
+
+      "entraineur": "Oscar Tabarez"
+    },
     
-}
+    {
+      "pays" : "corée du sud ",
+
+      "entraineur": "Shin Tae-Yong "
+    },
+    {
+      "pays" : "Arabie Saoudite",
+
+      "entraineur": "Juan Antonio Pizzi"
+    },
+    {
+      "pays" : "Iran",
+
+      "entraineur": "Carlos Queiroz"
+    }
+  
+  
+]
+
