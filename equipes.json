@@ -1,25 +1,22 @@
 [
     {
-  
-      "pays": "angleterre",
-  
-      "entraineur": "Gareth southgate"
-  
+        "pays": "angleterre",
+        "entraineur": "Gareth southgate"
     },
-  
     {
-      "pays" : "uruguay",
-
-      "entraineur": "Oscar Tabarez"
+        "pays": "uruguay",
+        "entraineur": "Oscar Tabarez"
     },
-    
     {
-      "pays" : "corée du sud ",
-
-      "entraineur": "Shin Tae-Yong "
+        "pays": "corée du sud ",
+        "entraineur": "Shin Tae-Yong "
+    },
+    {
+        "pays": "france",
+        "entraineur": "Didier DESCHAMPS"
+    },
+    {
+        "pays": "australie ",
+        "entraineur": " Bert VAN MARWIJK "
     }
-  
-  
-  
 ]
-
