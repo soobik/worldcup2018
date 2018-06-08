@@ -21,12 +21,16 @@
     {
        "pays" : "russie",
 
-       "entraineur" : "Stanislav Tchertchessov"
+       "entraineur" : "Stanislav Tchertchessov",
+
+       "flag" : "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Russia.png"
     },
     {
         "pays" : "islande",
 
-        "entraineur" : "Heimir Hallgrímsson"
+        "entraineur" : "Heimir Hallgrímsson",
+
+        "flag" : "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg"
     }
   
   
