@@ -8,15 +8,17 @@
     },
   
     {
+      "id": 2,
       "pays" : "uruguay",
-
-      "entraineur": "Oscar Tabarez"
+      "entraineur": "Oscar Tabarez",
+      "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_l%27Uruguay#/media/File:Flag_of_Uruguay.svg"
     },
     
     {
+      "id": 3,
       "pays" : "corée du sud ",
-
-      "entraineur": "Shin Tae-Yong "
+      "entraineur": "Shin Tae-Yong ",
+      "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_la_Cor%C3%A9e_du_Sud#/media/File:Flag_of_South_Korea.svg"
     },
     {
       "pays" : "Arabie Saoudite",
