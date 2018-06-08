@@ -17,9 +17,27 @@
       "pays" : "corée du sud ",
 
       "entraineur": "Shin Tae-Yong "
-    }
+    },
   
+    {
   
+        "pays": "Nigeria",
+    
+        "entraineur": "Gernot Rohr"
+    
+      },
+    
+      {
+        "pays" : "Bresil ",
+  
+        "entraineur": "Tite"
+      },
+      
+      {
+        "pays" : "Pologne",
+  
+        "entraineur": "Adam Nawałka "
+      }
   
 ]
 
