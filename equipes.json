@@ -1,9 +1,9 @@
 [
     {
-  
+      "id": 1,
       "pays": "angleterre",
-  
-      "entraineur": "Gareth southgate"
+      "entraineur": "Gareth southgate",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png"
   
     },
   
@@ -18,16 +18,44 @@
 
       "entraineur": "Shin Tae-Yong "
     },
+    {
+      "pays" : "Arabie Saoudite",
+
+      "entraineur": "Juan Antonio Pizzi"
+    },
+    {
+      "pays" : "Iran",
+
+      "entraineur": "Carlos Queiroz"
+    },
+    {
+        "pays" : "Serbie ",
+  
+        "entraineur": "Mladen Krstajić",
+
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg"
+    },
   
     {
-        "pays" : "mexique ",
+        "pays" : "Allemagne ",
   
-        "entraineur": "Juan Carlos OSORIO "
+        "entraineur": "Joachim Löw",
+
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
+    },
+    {
+        "pays" : "mexique ",
+
+        "entraineur": "Juan Carlos OSORIO ",
+
+        "flag" : "https://www.google.com/search?q=drapeau+mexique&client=ubuntu&hs=06a&channel=fs&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjE0c-D38PbAhWGt1kKHcwlCCUQ_AUICigB&biw=1920&bih=922#imgrc=XmjeGJ1BYnJ-QM:"
     },
     {
         "pays" : "suède ",
   
-        "entraineur": "Janne ANDERSON "
+        "entraineur": "Janne ANDERSON ",
+        
+        "flag" : "https://www.google.com/search?client=ubuntu&hs=F8a&channel=fs&biw=1920&bih=922&tbm=isch&sa=1&ei=I0saW9vZL4G35gLDorngDw&q=drapeau+su%C3%A8de&oq=drapeau+su%C3%A8de&gs_l=img.3...19324.20807.0.21267.0.0.0.0.0.0.0.0..0.0....0...1c.1.64.img..0.0.0....0.o-yR4mftjwQ#imgrc=Mlg3KgovUMpelM:"
     }
   
 ]
