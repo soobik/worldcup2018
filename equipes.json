@@ -1,3 +1,41 @@
-{
+[
+    {
+  
+      "pays": "angleterre",
+  
+      "entraineur": "Gareth southgate"
+  
+    },
+  
+    {
+      "pays" : "uruguay",
+
+      "entraineur": "Oscar Tabarez"
+    },
     
-}
+    {
+      "pays" : "corée du sud ",
+
+      "entraineur": "Shin Tae-Yong "
+    }
+  
+    {
+      "equipe": "Perou",
+  
+      "entraineur": "Alfredo Honores"
+    },
+    {
+      "equipe": "Colombie",
+  
+      "entraineur": "José Pékerman"
+    },
+    {
+      "equipe": "Danemark",
+  
+      "entraineur": "Åge Hareide"
+    }
+    
+  
+  
+]
+
