@@ -1,9 +1,9 @@
 [
     {
-  
+      "id": 1,
       "pays": "angleterre",
-  
-      "entraineur": "Gareth southgate"
+      "entraineur": "Gareth southgate",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png",
   
     },
   
@@ -20,20 +20,35 @@
     },
    
     {
+      "id": 1,
       "pays" : "Egypte",
-
-      "entraineur": "Héctor Cúper"
+      "entraineur": "Héctor Cúper",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg"
+  
     },    
     {
+      "id": 1,
       "pays" : "Portugal",
-
-      "entraineur": "Fernando Santos"
+      "entraineur": "Fernando Santos",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg"
+  
     },
     
     {
+      "id": 1,
       "pays" : "Belgique",
+      "entraineur": "Roberto Martínez Montoliú",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
+    },
+    {
+      "pays" : "Arabie Saoudite",
 
-      "entraineur": "Roberto Martínez Montoliú"
+      "entraineur": "Juan Antonio Pizzi"
+    },
+    {
+      "pays" : "Iran",
+
+      "entraineur": "Carlos Queiroz"
     }
   
   
