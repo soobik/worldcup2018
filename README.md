@@ -16,12 +16,14 @@ Vos sources de données doivent être au format JSON.
 # Les attentes et points de contrôles :
 
 - En terme de gestion de projet :
+
 Réfléchir collectivement à une structure pour le fichier json.
 Chaque apprenant doit compléter un fichier json commun sur le repo git du formateur.
 Identifier les tâches à faire.
 Partager les tâches entre les apprenants.
 
 - En terme de production :
+
 /!\ Travailler collaborativement sur le code avec git.
 Avoir un code simple et efficace.
 Avoir un code commenté.
