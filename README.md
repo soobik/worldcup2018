@@ -54,8 +54,8 @@ Vos sources de données doivent être au format JSON.
 * Croatie : idriss [NOT OK]
 * Nigeria : badrane [NOT OK]
 * Bresil : badrane[NOT OK]
-* Suisse : alexandre[NOT OK]
-* Costa Rica : alexandre [NOT OK]
+* Suisse : alexandre[OK]
+* Costa Rica : alexandre [OK]
 * Serbie : anna [NOT OK]
 * Allemagne : anna [NOT OK]
 * Mexique : nova [NOT OK]
@@ -67,6 +67,6 @@ Vos sources de données doivent être au format JSON.
 * Pologne : badrane [NOT OK]
 * Senegal : adama[NOT OK]
 * Colombie : allison [NOT OK]
-* Japon : alexandre [NOT OK]
+* Japon : alexandre [OK]
 
 * Alimenter ce TODO. [NOT OK]
