@@ -37,8 +37,13 @@ Vos sources de données doivent être au format JSON.
 * Récolter les informations sur les équipes. [NOT OK]
 * Liste des equipes : 
 * Angleterre : pascal [NOT OK]
+<<<<<<< HEAD
+* Russie : jennifer [OK]
+* Egypte : jean-fred [NOT OK]
+=======
 * Russie : jennifer [NOT OK]
 * Egypte : jean-fred [OK]
+>>>>>>> worldcup2018/master
 * Arabie Saoudite : adama[OK]
 * Uruguay : pascal [NOT OK]
 * Iran : adama [OK]
@@ -50,7 +55,7 @@ Vos sources de données doivent être au format JSON.
 * Perou : alisson [ OK]
 * Danemark : alisson [ OK]
 * Argentine : idriss [NOT OK]
-* Islande : jennifer[NOT OK]
+* Islande : jennifer[OK]
 * Croatie : idriss [NOT OK]
 * Nigeria : badrane [NOT OK]
 * Bresil : badrane[NOT OK]

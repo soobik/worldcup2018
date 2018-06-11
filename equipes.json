@@ -1,19 +1,16 @@
 [
     {
-      "id": 1,
-      "pays": "angleterre",
-      "entraineur": "Gareth southgate",
-      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png"
-  
+        "id": 1,
+        "pays": "angleterre",
+        "entraineur": "Gareth southgate",
+        "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png"
     },
-  
     {
       "id": 2,
       "pays" : "uruguay",
       "entraineur": "Oscar Tabarez",
       "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_l%27Uruguay#/media/File:Flag_of_Uruguay.svg"
     },
-    
     {
       "id": 3,
       "pays" : "corée du sud ",
@@ -64,14 +61,27 @@
       "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
     },
     {
-      "pays" : "Arabie Saoudite",
-
-      "entraineur": "Juan Antonio Pizzi"
+        "id": 1 ,
+        "pays": "russie",
+        "entraineur": "Stanislav Tchertchessov",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Russia.png"
     },
     {
-      "pays" : "Iran",
+        "id": 1 ,
+        "pays": "islande",
+        "entraineur": "Heimir Hallgrímsson",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg"
+    },
+    {
+        "pays": "Arabie Saoudite",
+        
+        "entraineur": "Juan Antonio Pizzi"
+    },
+    {
+        "pays": "Iran",
+        
+        "entraineur": "Carlos Queiroz"
 
-      "entraineur": "Carlos Queiroz"
     },
     {
         "pays" : "Serbie ",
@@ -112,9 +122,4 @@
 
     
     }
-  
-  
-  
-  
 ]
-
