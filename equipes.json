@@ -87,7 +87,33 @@
         "entraineur": "Joachim Löw",
 
         "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
+    },
+    {
+      "id": 1 ,
+      "pays":"Danemark",
+
+      "flag":"https://fr.wikipedia.org/wiki/Fichier:Football_Danemark_federation.svg#/media/File:Football_Danemark_federation.svg"
+
+    
+    },
+    {
+      "id": 1 ,
+      "pays":"Perou",
+
+      "flag":"https://commons.wikimedia.org/wiki/File:Logotipo_FPF_2016.png#/media/File:Logotipo_FPF_2016.png"
+
+    
+    },
+    {
+      "id": 1 ,
+      "pays":"Colombie",
+
+      "flag":"https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+
+    
     }
+  
+  
   
   
 ]
