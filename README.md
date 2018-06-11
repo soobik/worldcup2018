@@ -33,7 +33,7 @@ Vos sources de données doivent être au format JSON.
 
 ###
 # TODO : 
-* Faire une structure de fichier efficace pour ce projet. [OK]
+* Faire une structure de fichier efficace pour ce projet. [NOT OK]
 * Récolter les informations sur les équipes. [NOT OK]
 * Liste des equipes : 
 * Angleterre : pascal [NOT OK]
