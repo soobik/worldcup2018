@@ -2,7 +2,7 @@
     {
         "id": 1,
         "pays": "Russie",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Russia.png"
     },
     {
         "id": 2,
@@ -12,12 +12,12 @@
     {
         "id": 3,
         "pays": "Egypte",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg"
     },
     {
         "id": 4,
-        "pays": "FUruguay",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "pays": "Uruguay",
+        "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_l%27Uruguay#/media/File:Flag_of_Uruguay.svg"
     },
     {
         "id": 5,
@@ -32,7 +32,7 @@
     {
         "id": 7,
         "pays": "Portugal",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg"
     },
     {
         "id": 8,
@@ -82,7 +82,7 @@
     {
         "id": 17,
         "pays": "Costa rica",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
     },
     {
         "id": 18,
@@ -97,7 +97,7 @@
     {
         "id": 20,
         "pays": "Suisse",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg"
     },
     {
         "id": 21,
@@ -117,12 +117,12 @@
     {
         "id": 24,
         "pays": "corée du sud",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_la_Cor%C3%A9e_du_Sud#/media/File:Flag_of_South_Korea.svg"
     },
     {
         "id": 25,
         "pays": "Belgique",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
     },
     {
         "id": 26,
@@ -137,7 +137,7 @@
     {
         "id": 28,
         "pays": "Angleterre",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png"
     },
     {
         "id": 29,
@@ -146,8 +146,8 @@
     },
     {
         "id": 30,
-        "pays": "Japan",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "pays": "Japon",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
     },
     {
         "id": 31,
