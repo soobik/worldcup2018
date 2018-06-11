@@ -22,3 +22,21 @@ body {
 .navbar-dark .navbar-nav .active > .nav-link {
         background: #4f9cef;
 }
+
+/*=================================
+        MAIN
+====================================*/
+
+h2.text-danger {
+        font-family: 'Rancho', cursive;
+        font-size: 45px;
+}
+
+/******** PAGE KNOCKOUT ********/
+.list-group{
+        margin-top: 200px; 
+}
+    
+.title-knock{
+        margin-bottom: 50px; 
+ }

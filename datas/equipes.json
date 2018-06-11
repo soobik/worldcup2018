@@ -1,162 +1,108 @@
 [
     {
+        "id": 0,
+        "pays": "angleterre",
+        "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png"
+    },
+    {
+        "id": 0,
+        "pays": "uruguay",
+        "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_l%27Uruguay#/media/File:Flag_of_Uruguay.svg"
+    },
+    {
+        "id": 0,
+        "pays": "corée du sud ",
+        "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_la_Cor%C3%A9e_du_Sud#/media/File:Flag_of_South_Korea.svg"
+    },
+  
+    {
+        "id":1,
+        "pays": "Nigeria",
+        "flag": "https://commons.wikimedia.org/wiki/File:Flag_of_Nigeria.svg#/media/File:Flag_of_Nigeria.svg"
+    
+      },
+    
+      {
+        "id":1,
+        "pays" : "Bresil ",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
+      },
+      
+      {
+        "id":1,
+        "pays" : "Pologne",
+        "flag": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland.svg#/media/File:Flag_of_Poland.svg"
+      },
+  
+    {
         "id": 1,
-        "pays": "Russie",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Russia.png"
+        "pays": "japon",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
     },
     {
-        "id": 2,
-        "pays": "Arabie Saoudite",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "id": 1,
+        "pays": "costa rica",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
     },
     {
-        "id": 3,
+        "id": 1,
+        "pays": "suisse",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg"
+    },
+    {
+        "id": 1,
         "pays": "Egypte",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg"
     },
     {
-        "id": 4,
-        "pays": "Uruguay",
-        "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_l%27Uruguay#/media/File:Flag_of_Uruguay.svg"
-    },
-    {
-        "id": 5,
-        "pays": "Maroc",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 6,
-        "pays": "Iran",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 7,
+        "id": 1,
         "pays": "Portugal",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg"
     },
     {
-        "id": 8,
-        "pays": "Espagne",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 9,
-        "pays": "France",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 10,
-        "pays": "Australie",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 11,
-        "pays": "Perou",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 12,
-        "pays": "Danemark",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 13,
-        "pays": "Argentine",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 14,
-        "pays": "Island",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 15,
-        "pays": "Croatie",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 16,
-        "pays": "Nigeria",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 17,
-        "pays": "Costa rica",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
-    },
-    {
-        "id": 18,
-        "pays": "Serbie",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 19,
-        "pays": "Bresil",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 20,
-        "pays": "Suisse",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg"
-    },
-    {
-        "id": 21,
-        "pays": "Allemagne",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 22,
-        "pays": "Mexique",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 23,
-        "pays": "Suede",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 24,
-        "pays": "corée du sud",
-        "flag": "https://fr.wikipedia.org/wiki/Drapeau_de_la_Cor%C3%A9e_du_Sud#/media/File:Flag_of_South_Korea.svg"
-    },
-    {
-        "id": 25,
+        "id": 1,
         "pays": "Belgique",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
     },
     {
-        "id": 26,
-        "pays": "Panama",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "id": 1,
+        "pays": "russie",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Russia.png"
     },
     {
-        "id": 27,
-        "pays": "Tunisie",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        "id": 1,
+        "pays": "islande",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg"
     },
     {
-        "id": 28,
-        "pays": "Angleterre",
-        "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png"
+        "pays": "Arabie Saoudite",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
     },
     {
-        "id": 29,
+        "pays": "Iran",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
+    },
+    {
+        "pays": "Serbie ",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg"
+    },
+    {
+        "pays": "Allemagne ",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
+    },
+    {
+        "id": 1,
+        "pays": "Danemark",
+        "flag": "https://fr.wikipedia.org/wiki/Fichier:Football_Danemark_federation.svg#/media/File:Football_Danemark_federation.svg"
+    },
+    {
+        "id": 1,
+        "pays": "Perou",
+        "flag": "https://commons.wikimedia.org/wiki/File:Logotipo_FPF_2016.png#/media/File:Logotipo_FPF_2016.png"
+    },
+    {
+        "id": 1,
         "pays": "Colombie",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 30,
-        "pays": "Japon",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
-    },
-    {
-        "id": 31,
-        "pays": "Pologne",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
-    },
-    {
-        "id": 32,
-        "pays": "Senegal",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
     }
 

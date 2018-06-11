@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet"> 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,72 +15,379 @@
   <body>
       <!--HEADER-->
       <!--Menu-->
-      <header class="container-fluid bg-primary">
-          <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                <a class="navbar-brand" href="#"><img src="static/img/logo-2018.jpg" class="w-50 rounded"></a>
-                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active m-5">
-                            <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item m-5">
-                            <a class="nav-link" href="#">Groupes</a>
-                        </li>
-                        <li class="nav-item m-5">
-                            <a class="nav-link" href="#">Equipes</a>
-                        </li>
-                        <li class="nav-item m-5">
-                            <a class="nav-link" href="#">Knockout</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-          </div>
-      </header>
+    <header class="container-fluid bg-primary">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <a class="navbar-brand" href="#"><img src="static/img/logo-2018.jpg" class="w-50 rounded"></a>
+            <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active m-5">
+                        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                  <!--  <li class="nav-item m-5">
+                        <a class="nav-link" href="#">Groupes</a>
+                    </li>-->
+                    <li class="nav-item m-5">
+                        <a class="nav-link" href="equipe.html">Equipes</a>
+                    </li>
+                    <li class="nav-item m-5">
+                        <a class="nav-link" href="#">Knockout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+    </header>
 
-      <!--MAIN--> 
-        <!-- 4 groupes par ligne-->
-        <section class="container">
-            <div class="row">
-                <article class="col-md-3 col-sm-12">
-                 <!-- groupe A 4 equipe ajout drapeau + pays date et heure-->
+    <!--MAIN--> 
+    <main>
+        <section class="container mt-5">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="text-danger">Groupe A</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
+                    <!-- groupe A 4 equipe ajout drapeau + pays -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placés pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- groupe B 4 equipe ajout drapeau + pays date et heure-->
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- groupe C 4 equipe ajout drapeau + pays date et heure-->
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- groupe D 4 equipe ajout drapeau + pays date et heure-->
+                <article class=" col-md-6 col-sm-12">
+                    <!-- groupe B 4 equipe ajout drapeau + pays -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
-            <div class="row">
-                <article class="col-md-3 col-sm-12">
+            <!--GROUPE B-->
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="text-danger">Groupe B</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class=" col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="text-danger">Groupe C</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
+                    <!-- groupe c 4 equipe ajout drapeau + pays -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class=" col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="text-danger">Groupe D</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
+                    <!-- groupe D 4 equipe ajout drapeau + pays date et heure-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </article>
+                <article class=" col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="text-danger">Groupe E</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
                     <!-- groupe E 4 equipe ajout drapeau + pays date et heure-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <article class="col-md-3 col-sm-12">
+                <article class=" col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2  class="text-danger">Groupe F</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
                     <!-- groupe F 4 equipe ajout drapeau + pays date et heure-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </article>
-                <article class="col-md-3 col-sm-12">
+                <article class=" col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2  class="text-danger">Groupe G</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
                     <!-- groupe G 4 equipe ajout drapeau + pays date et heure-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <article class="col-md-3 col-sm-12">
+                <article class=" col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="text-danger">Groupe H</h2>
+                </div>
+            </div>
+            <div class="row border mb-3 p-3">
+                <article class="col-md-6 col-sm-12">
                     <!-- groupe H 4 equipe ajout drapeau + pays date et heure-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+                <article class=" col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <img src="static/img/russie.png">
+                                    <h2>Nom de l'équipe s'affiche ici</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
+    </main>
+
       <!--FOOTER--> 
-      <footer class="container-fluid">
-            <div class="container">
-                <p>&copy 2018</p>
-            </div>
-      </footer>
+    <footer class="container-fluid">
+        <div class="container">
+            <p>&copy 2018</p>
+        </div>
+    </footer>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
