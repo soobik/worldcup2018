@@ -1,16 +1,10 @@
-$(function(){
 
-    console.log(get_groups());
-
-})
-
-var get_groups = function(){
-    $.ajax({url :'http://127.0.0.1:3012/groups', 
-        success: function(data){
-            console.log(data);
-            for (var cle in data){
-                $("#test").append(data[cle])
-            };
+$.ajax({
+    url: "http://127.0.0.1:3012/datas/groups.json",
+    success : function(data){
+        console.log(data.groups[a])
+        for (var i=0; i<data.length; i++){
+            $("#test").append('<p>' + data[i].groups + '</p>')
         }
-    });
-}
+    }
+})
