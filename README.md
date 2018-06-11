@@ -32,6 +32,31 @@ Vos sources de données doivent être au format JSON.
 * Chaque apprenant qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
 ###
+# Démarrage du projet
+* Fork du projet initial sur votre compte github
+* Clonage du projet sur votre ordi: 
+    git clone https://github.com/<votre-repository>/worldcup2018.git
+* Ajoutez à votre fork le remote du projet d'origine
+    git remote add worldcup2018 https://github.com/soobik/worldcup2018.git
+# N'oubliez pas vos git add et git commit régulier
+# Push
+* Mettez à jour votre fork en local: 
+    git fetch worldcup2018
+* Fusionnez (merge) maintenant votre copie locale avec le projet d'origine: 
+    git merge worldcup2018/master
+* Validez vos changements si vous avez ajouté des fichers
+* en cas modification d'un fichier sauter cette etape.
+    git add .
+    git commit -m "ajout de nouveaux fichiers" 
+* Envoyez vos changements sur votre github
+    git push
+* Faire un pull request via le site ou en ligne de commande, mais la j'ai pas trouvé.
+
+/!\ AVANT DE SAISIR TOUTES COMMANDES
+/!\ VEUILLEZ BIEN REFLECHIR A CE QUE VOUS VOULEZ EFFECTUER COMME TACHE
+/!\ DANS LE DOUTE DEMANDER A UN AMI :-)
+
+###
 # TODO : 
 * Faire une structure de fichier efficace pour ce projet. [NOT OK]
 * Récolter les informations sur les équipes. [NOT OK]
@@ -45,10 +70,17 @@ Vos sources de données doivent être au format JSON.
 * Portugal : jean-fred [OK]
 * Espagne : didier [NOT OK]
 * Maroc : didier [NOT OK]
+<<<<<<< HEAD
+* France : michael [OK]
+* Australie : michael [OK]
+* Perou : alisson [NOT OK]
+* Danemark : alisson [NOT OK]
+=======
 * France : michael [NOT OK]
 * Australie : michael [NOT OK]
 * Perou : alisson [ OK]
 * Danemark : alisson [ OK]
+>>>>>>> worldcup2018/master
 * Argentine : idriss [NOT OK]
 * Islande : jennifer[OK]
 * Croatie : idriss [NOT OK]
