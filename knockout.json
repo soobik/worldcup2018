@@ -16,7 +16,6 @@
           "winner": null,
           "date": "2018-06-30T17:00:00+03:00",
           "stadium": 11,
-          "channels": [4],
           "finished": false,
           "matchday": 4
         },
@@ -32,7 +31,6 @@
           "winner": null,
           "date": "2018-06-30T21:00:00+03:00",
           "stadium": 5,
-          "channels": [4,6],
           "finished": false,
           "matchday": 4
         },
@@ -48,7 +46,6 @@
           "winner": null,
           "date": "2018-07-01T17:00:00+03:00",
           "stadium": 1,
-          "channels": [3],
           "finished": false,
           "matchday": 4
         },
@@ -64,7 +61,6 @@
           "winner": null,
           "date": "2018-07-01T21:00:00+03:00",
           "stadium": 6,
-          "channels": [4,6],
           "finished": false,
           "matchday": 4
         },
@@ -80,7 +76,6 @@
           "winner": null,
           "date": "2018-07-02T18:00:00+04:00",
           "stadium": 7,
-          "channels": [3,6],
           "finished": false,
           "matchday": 4
         },
@@ -96,7 +91,6 @@
           "winner": null,
           "date": "2018-07-02T21:00:00+03:00",
           "stadium": 10,
-          "channels": [3,6],
           "finished": false,
           "matchday": 4
         },
@@ -112,7 +106,6 @@
           "winner": null,
           "date": "2018-07-03T17:00:00+03:00",
           "stadium": 3,
-          "channels": [4,6],
           "finished": false,
           "matchday": 4
         },
@@ -128,7 +121,6 @@
           "winner": null,
           "date": "2018-07-03T21:00:00+03:00",
           "stadium": 2,
-          "channels": [3,6],
           "finished": false,
           "matchday": 4
         }
@@ -149,7 +141,6 @@
           "winner": null,
           "date": "2018-07-06T17:00:00+03:00",
           "stadium": 6,
-          "channels": [3],
           "finished": false,
           "matchday": 5
         },
@@ -165,7 +156,6 @@
           "winner": null,
           "date": "2018-07-06T21:00:00+03:00",
           "stadium": 5,
-          "channels": [3],
           "finished": false,
           "matchday": 5
         },
@@ -181,7 +171,6 @@
           "winner": null,
           "date": "2018-07-07T21:00:00+03:00",
           "stadium": 11,
-          "channels": [4],
           "finished": false,
           "matchday": 5
         },
@@ -197,7 +186,6 @@
           "winner": null,
           "date": "2018-07-07T18:00:00+04:00",
           "stadium": 7,
-          "channels": [4],
           "finished": false,
           "matchday": 5
         }
@@ -218,7 +206,6 @@
           "winner": null,
           "date": "2018-07-10T21:00:00+03:00",
           "stadium": 3,
-          "channels": [4],
           "finished": false,
           "matchday": 6
         },
@@ -234,7 +221,6 @@
           "winner": null,
           "date": "2018-07-11T21:00:00+03:00",
           "stadium": 1,
-          "channels": [3],
           "finished": false,
           "matchday": 6
         }
@@ -255,7 +241,6 @@
           "winner": null,
           "date": "2018-07-14T17:00:00+03:00",
           "stadium": 3,
-          "channels": [4],
           "finished": false,
           "matchday": 7
         }
@@ -276,7 +261,6 @@
           "winner": null,
           "date": "2018-07-15T18:00:00+03:00",
           "stadium": 1,
-          "channels": [3, 4],
           "finished": false,
           "matchday": 7
         }
