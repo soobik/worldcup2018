@@ -74,13 +74,17 @@
     },
     {
         "pays": "Arabie Saoudite",
-        
-        "entraineur": "Juan Antonio Pizzi"
+
+        "entraineur": "Juan Antonio Pizzi",
+      
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
     },
     {
         "pays": "Iran",
         
-        "entraineur": "Carlos Queiroz"
+        "entraineur": "Carlos Queiroz",
+
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
 
     },
     {
@@ -112,7 +116,6 @@
 
       "flag":"https://commons.wikimedia.org/wiki/File:Logotipo_FPF_2016.png#/media/File:Logotipo_FPF_2016.png"
 
-    
     },
     {
       "id": 1 ,
@@ -120,6 +123,5 @@
 
       "flag":"https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
 
-    
     }
 ]
