@@ -3,8 +3,9 @@
  */
 const express = require('express');
 const app = express();
+const port = 3012;
 
-app.use(express.static('public'));
+app.use(express.static('static'));
 /**
  * Route vers index.html
  */
@@ -18,10 +19,15 @@ app.get('/', function (req, res) {
 app.get('/groups', function(req, res){
     res.sendFile(__dirname + ('/groups.json'))
 });
+/**
+ * Route vers date du match
+ */
 
 /**
  * Port d'écoute du serveur
  */
-app.listen(3012, function(){
+app.listen(port, function(){
     console.log('server ON');
 })
+
+
