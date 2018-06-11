@@ -24,26 +24,6 @@
         "pays": "Maroc",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
     },
-  
-    {
-        "id":1,
-        "pays": "Nigeria",
-        "flag": "https://commons.wikimedia.org/wiki/File:Flag_of_Nigeria.svg#/media/File:Flag_of_Nigeria.svg"
-    
-      },
-    
-      {
-        "id":1,
-        "pays" : "Bresil ",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
-      },
-      
-      {
-        "id":1,
-        "pays" : "Pologne",
-        "flag": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland.svg#/media/File:Flag_of_Poland.svg"
-      },
-  
     {
         "id": 6,
         "pays": "Iran",
