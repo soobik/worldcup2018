@@ -45,10 +45,17 @@ Vos sources de données doivent être au format JSON.
 * Portugal : jean-fred [OK]
 * Espagne : didier [NOT OK]
 * Maroc : didier [NOT OK]
+<<<<<<< HEAD
+* France : michael [OK]
+* Australie : michael [OK]
+* Perou : alisson [NOT OK]
+* Danemark : alisson [NOT OK]
+=======
 * France : michael [NOT OK]
 * Australie : michael [NOT OK]
 * Perou : alisson [ OK]
 * Danemark : alisson [ OK]
+>>>>>>> worldcup2018/master
 * Argentine : idriss [NOT OK]
 * Islande : jennifer[OK]
 * Croatie : idriss [NOT OK]
