@@ -5,13 +5,15 @@ const express = require('express');
 var parser = require('json-parser');
 var fs = require('fs');
 const app = express();
-const port = 3012;
+const port = 3090;
 
 app.use(express.static('static'));
 
 var equipes = require('./equipes.js');
 app.use('/get_equipes', equipes);
 
+var knockout = require('./knockout.js');
+app.use('/get_knockout', knockout);
 /**
  * Route vers index.html
  */
