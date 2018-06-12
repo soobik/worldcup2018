@@ -7,10 +7,25 @@ var fs = require('fs');
 const app = express();
 const port = 3012;
 
-app.use(express.static('static'));
 
+app.use(express.static('static'));
+/**
+ * affichage des équipes
+ */
 var equipes = require('./equipes.js');
 app.use('/get_equipes', equipes);
+
+/**
+ * affichage des knockout
+ */
+var knockout = require('./knockout.js');
+app.use('/get_knockout', knockout);
+
+/**
+ * affichage des groupes
+ */
+var groups = require('./groups.js');
+app.use('/get_groups', groups);
 
 /**
  * Route vers index.html
