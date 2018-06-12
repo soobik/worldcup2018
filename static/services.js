@@ -1,4 +1,6 @@
-var services = function(param){ 
+var reponse = "toto";
+
+var services = function(param,cb){ 
     var service = "http://localhost:2004/";
     // var myData = "";
     // console.log(service);
@@ -20,44 +22,36 @@ var services = function(param){
             // console.log('error');
             break;
     }  
-
-    console.log("Avant myData");
-
-    myData = function(err, cb){
-        console.log('toto');
-    $.ajax({
-        type: 'GET',
-        url: service,
-        success : function(data, cb){
-            console.log("Dans success Ajax");
-            var cb = function(data){
-                console.log("dans le callback de success");
-            }
-            cb();
-            // datas = data;
-            
-            //return data;
-        },
-        failed : function(data, status){
-            return false;
-        }
-        });
-        
-       
-    }
     
-    //myData();
-    console.log();
-    
-    var traitement = function(){
+    myData(service, function(data){
+        reponse = data;
         console.log("dans process");
-    }
+        console.log("dans process "+ reponse);
+        cb(data);
+        
+        //console.log(data);
+        
+    }, reponse)
     
-    // console.log(myData);    
+    console.log("apres mydata " + reponse);
+        
+    return reponse;
+   
 }
 
-
-
-
-// var equipes = services("equipes")
-// services("groups")
+myData = function(service, cb, reponse){
+    console.log('dans myData');
+$.ajax({
+    type: 'GET',
+    url: service,
+    success : function(data){
+        console.log("Dans success Ajax");
+        cb(data);
+    },
+    failed : function(data, status){
+        return false;
+    }
+    });
+    
+   
+}

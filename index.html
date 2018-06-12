@@ -102,7 +102,11 @@
                                     <img src="img/russie.png">
                                     <h2>
                                         <script>
-                                            services("equipes");
+                                            services("equipes", function(data){
+                                                console.log("dans la vue 1 " + data.id);
+                                            });
+                                            
+                                            
                                             // console.log(services("knockout"));
                                             // console.log(services("groups"));
 
