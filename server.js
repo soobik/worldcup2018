@@ -5,7 +5,7 @@ const express = require('express');
 var parser = require('json-parser');
 var fs = require('fs');
 const app = express();
-const port = 3090;
+const port = 3091;
 
 app.use(express.static('static'));
 
@@ -14,6 +14,9 @@ app.use('/get_equipes', equipes);
 
 var knockout = require('./knockout.js');
 app.use('/get_knockout', knockout);
+
+var groups = require('./groups.js');
+app.use('/get_groups', groups);
 /**
  * Route vers index.html
  */
