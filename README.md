@@ -68,7 +68,7 @@ Vos sources de données doivent être au format JSON.
 * Alimenter ce TODO. [NOT OK]
 
 * Retirer les routes de app.js et creer un répertoire /routes
-* Creer un fichier equipes.js
-* Creer un fichier groups.js
-* Creer un fichier knockout.js
-* Creer un fichier stadiums.js
+* Creer un fichier equipes.js OK
+* Creer un fichier groups.js OK
+* Creer un fichier knockout.js OK
+* Creer un fichier stadiums.js OK
