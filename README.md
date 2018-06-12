@@ -32,41 +32,43 @@ Vos sources de données doivent être au format JSON.
 * Chaque apprenant qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
 ###
+# Démarrage du projet
+* Fork du projet initial sur votre compte github
+* Clonage du projet sur votre ordi: 
+    git clone https://github.com/<votre-repository>/worldcup2018.git
+* Ajoutez à votre fork le remote du projet d'origine
+    git remote add worldcup2018 https://github.com/soobik/worldcup2018.git
+# N'oubliez pas vos git add et git commit régulier
+# Push
+* Mettez à jour votre fork en local: 
+    git fetch worldcup2018
+* Fusionnez (merge) maintenant votre copie locale avec le projet d'origine: 
+    git merge worldcup2018/master
+* Validez vos changements si vous avez ajouté des fichers
+* en cas modification d'un fichier sauter cette etape.
+    git add .
+    git commit -m "ajout de nouveaux fichiers" 
+* Envoyez vos changements sur votre github
+    git push
+* Faire un pull request via le site ou en ligne de commande, mais la j'ai pas trouvé.
+
+/!\ AVANT DE SAISIR TOUTES COMMANDES
+
+/!\ VEUILLEZ BIEN REFLECHIR A CE QUE VOUS VOULEZ EFFECTUER COMME TACHE
+
+/!\ DANS LE DOUTE DEMANDER A UN AMI :-)
+
+###
 # TODO : 
 * Faire une structure de fichier efficace pour ce projet. [NOT OK]
 * Récolter les informations sur les équipes. [NOT OK]
-* Liste des equipes : 
-* Angleterre : pascal [NOT OK]
-* Russie : jennifer [OK]
-* Egypte : jean-fred [OK]
-* Arabie Saoudite : adama[OK]
-* Uruguay : pascal [NOT OK]
-* Iran : adama [OK]
-* Portugal : jean-fred [OK]
-* Espagne : didier [NOT OK]
-* Maroc : didier [NOT OK]
-* France : michael [NOT OK]
-* Australie : michael [NOT OK]
-* Perou : alisson [ OK]
-* Danemark : alisson [ OK]
-* Argentine : idriss [NOT OK]
-* Islande : jennifer[OK]
-* Croatie : idriss [NOT OK]
-* Nigeria : badrane [OK]
-* Bresil : badrane[OK]
-* Suisse : alexandre[OK]
-* Costa Rica : alexandre [OK]
-* Serbie : anna [OK]
-* Allemagne : anna [OK]
-* Mexique : nova [NOT OK]
-* Suede : nova [NOT OK]
-* Corée du sud : pascal [NOT OK]
-* Belgique : jean-fred[OK]
-* Panama : didier [NOT OK]
-* Tunisie : idriss [NOT OK]
-* Pologne : badrane [OK]
-* Senegal : adama[NOT OK]
-* Colombie : allison [OK]
-* Japon : alexandre [OK]
+
+* Liste des equipes : [OK]
 
 * Alimenter ce TODO. [NOT OK]
+
+* Retirer les routes de app.js et creer un répertoire /routes
+* Creer un fichier equipes.js OK
+* Creer un fichier groups.js OK
+* Creer un fichier knockout.js OK
+* Creer un fichier stadiums.js OK
