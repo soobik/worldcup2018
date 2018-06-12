@@ -5,7 +5,7 @@ const express = require('express');
 var parser = require('json-parser');
 var fs = require('fs');
 const app = express();
-const port = 3091;
+const port = 2004;
 
 app.use(express.static('static'));
 /**
@@ -49,7 +49,7 @@ app.get('/knockout', function(req, res){
 /**
  * Route vers le fichier groups.json
  */
-app.get('/get_groups', function(req, res){
+app.get('/get_all_groups', function(req, res){
     res.sendFile(__dirname + '/datas/groups.json');
 });
 
@@ -83,7 +83,7 @@ app.get('/groups/g', function (req, res) {
     res.send('Welcome');
 })
 app.get('/groups/h', function (req, res) { 
-    res.send('Welcome');
+    res.json(get_group())
 })
 
 
@@ -99,21 +99,21 @@ app.listen(port, function(){
     console.log('server ON');
 })
 
-// var get_groups = function(){
+/**
+ * connerie a ne pas toucher !
+*/
+// var get_group = function(){
 
-//     fs.readFile('datas/groups.json', 'utf8', function(error, data) {
-        
-//             var obj = JSON.parse(data);
-//             var object = obj.groups
-//             console.log(object);
-//             var string = JSON.stringify(object);
-//             //console.log(string);
-//     })
-    
+// fs.readFile('datas/groups.json', 'utf8',alexandre())
+
 // }
 
-
-
-
+// var alexandre = function(error, data) {
+//     var obj = JSON.parse(data);
+//     var object = obj.groups;
+//     console.log(object);
+//     var string = JSON.stringify(object);
+//     console.log(tab);
+// }
 
 

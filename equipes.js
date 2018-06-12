@@ -26,4 +26,3 @@ router.get('/', function(req, res){
 //Exporte les routes
 module.exports = router;
 
-
