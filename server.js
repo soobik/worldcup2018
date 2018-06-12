@@ -9,7 +9,7 @@ const port = 3012;
 
 app.use(express.static('static'));
 
-var movies = require('./equipes.js');
+var equipes = require('./equipes.js');
 app.use('/get_equipes', equipes);
 
 /**
