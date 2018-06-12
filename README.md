@@ -53,7 +53,9 @@ Vos sources de données doivent être au format JSON.
 * Faire un pull request via le site ou en ligne de commande, mais la j'ai pas trouvé.
 
 /!\ AVANT DE SAISIR TOUTES COMMANDES
+
 /!\ VEUILLEZ BIEN REFLECHIR A CE QUE VOUS VOULEZ EFFECTUER COMME TACHE
+
 /!\ DANS LE DOUTE DEMANDER A UN AMI :-)
 
 ###
@@ -64,3 +66,9 @@ Vos sources de données doivent être au format JSON.
 * Liste des equipes : [OK]
 
 * Alimenter ce TODO. [NOT OK]
+
+* Retirer les routes de app.js et creer un répertoire /routes
+* Creer un fichier equipes.js OK
+* Creer un fichier groups.js OK
+* Creer un fichier knockout.js OK
+* Creer un fichier stadiums.js OK
