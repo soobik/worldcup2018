@@ -40,6 +40,10 @@ app.get('/equipe', function(req, res){
     res.sendfile(__dirname + '/equipe.html');
 });
 
+app.get('/stadium', function(req, res){
+    res.sendfile(__dirname + '/datas/stadium.json');
+});
+
 /**
  *  Route vers match.html
  */
