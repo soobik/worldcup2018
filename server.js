@@ -8,6 +8,10 @@ const app = express();
 const port = 3012;
 
 app.use(express.static('static'));
+
+var movies = require('./equipes.js');
+app.use('/get_equipes', equipes);
+
 /**
  * Route vers index.html
  */
@@ -35,9 +39,11 @@ app.get('/get_groups', function(req, res){
     res.sendFile(__dirname + '/datas/groups.json');
 });
 
+/*
 app.get('/get_equipe', function(req, res){
     res.sendFile(__dirname + '/datas/equipes.json');
 });
+*/
 
 
 app.get('/groups/a', function (req, res) { 
