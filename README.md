@@ -64,3 +64,5 @@ Vos sources de données doivent être au format JSON.
 * Liste des equipes : [OK]
 
 * Alimenter ce TODO. [NOT OK]
+
+* Retirer les routes de app.js et creer un répertoire /routes
