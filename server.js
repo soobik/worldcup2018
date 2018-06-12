@@ -40,6 +40,14 @@ app.get('/', function (req, res) {
 app.get('/equipe', function(req, res){
     res.sendfile(__dirname + '/equipe.html');
 });
+
+/**
+ *  Route vers match.html
+ */
+
+app.get('/match', function(req, res){
+    res.sendfile(__dirname + '/match.html');
+});
 /**
  * Route vers knockout.html
  */
