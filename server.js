@@ -5,7 +5,7 @@ const express = require('express');
 var parser = require('json-parser');
 var fs = require('fs');
 const app = express();
-const port = 3091;
+const port = 3012;
 
 
 app.use(express.static('static'));
@@ -39,6 +39,14 @@ app.get('/', function (req, res) {
  */
 app.get('/equipe', function(req, res){
     res.sendfile(__dirname + '/equipe.html');
+});
+
+/**
+ *  Route vers match.html
+ */
+
+app.get('/match', function(req, res){
+    res.sendfile(__dirname + '/match.html');
 });
 /**
  * Route vers knockout.html
