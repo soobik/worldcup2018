@@ -15,19 +15,30 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
     
 });
+/**
+ * Route vers equipe.html
+ */
+app.get('/equipe', function(req, res){
+    res.sendfile(__dirname + '/equipe.html');
+});
+/**
+ * Route vers knockout.html
+ */
+app.get('/knockout', function(req, res){
+    res.sendfile(__dirname + '/knockout.html');
+})
 
 /**
  * Route vers le fichier groups.json
  */
-app.get('/groups', function(req, res){
-    // res.json(get_groups());
+app.get('/get_groups', function(req, res){
     res.sendFile(__dirname + '/datas/groups.json');
 });
 
-app.get('/equipe', function(req, res){
-    // res.json(get_groups());
+app.get('/get_equipe', function(req, res){
     res.sendFile(__dirname + '/datas/equipes.json');
 });
+
 
 app.get('/groups/a', function (req, res) { 
     res.send('Welcome');
