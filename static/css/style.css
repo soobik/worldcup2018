@@ -45,3 +45,7 @@ h2.text-danger {
  .modal-height{
          height: 300px;
  }
+
+ .modal img {
+         width: 50%;
+ }
