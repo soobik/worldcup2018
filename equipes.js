@@ -17,8 +17,13 @@ var equipes = [
 
 
 //Routes
+router.get('/', function(req, res){
+   res.json(equipes);
+});
+
+
+
+//Exporte les routes
 module.exports = router;
 
-router.get('/', function(req, res){
-   res.json(movies);
-});
+
