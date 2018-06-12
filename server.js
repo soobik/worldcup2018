@@ -7,6 +7,7 @@ var fs = require('fs');
 const app = express();
 const port = 3091;
 
+
 app.use(express.static('static'));
 /**
  * affichage des équipes

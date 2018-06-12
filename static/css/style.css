@@ -33,10 +33,15 @@ h2.text-danger {
 }
 
 /******** PAGE KNOCKOUT ********/
-.list-group{
+/* .list-group{
         margin-top: 200px; 
-}
+} */
     
 .title-knock{
         margin-bottom: 50px; 
+ }
+
+
+ .modal-height{
+         height: 300px;
  }
