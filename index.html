@@ -19,7 +19,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     
-    <script src="main.js"></script>
+    <script src="services.js"></script>
 </head>
 
 <body>
@@ -48,6 +48,9 @@
                         <li class="nav-item m-5">
                             <a class="nav-link" href="equipe">Equipes</a>
                         </li>
+                        <li class="nav-item m-5">
+                                <a class="nav-link" href="match">Match</a>
+                            </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="knockout">Knockout</a>
                         </li>
@@ -99,7 +102,7 @@
                                     <img src="img/russie.png">
                                     <h2>
                                         <script>
-                                            console.log(services("equipes"));
+                                            services("equipes");
                                             // console.log(services("knockout"));
                                             // console.log(services("groups"));
 

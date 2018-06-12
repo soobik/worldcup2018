@@ -29,10 +29,18 @@
 //     });
 //   }
 
-
+$("#test").click(function(){
+    geoloc({lat: 55.817765,lng: 37.5515217}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+    
+});
+$("#test2").click(function(){
+    geoloc({lat: 55.817765,lng: 37.440363}, 'Otkrytiye Arena', 'https://upload.wikimedia.org/wikipedia/commons/5/50/Stadium_Spartak_in_Moscow.jpg');
+    
+});
 
 $(document).ready(function() {      
-    geoloc(1,{lat: 55.817765,lng: 37.5515217}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+    // geoloc({lat: 55.817765,lng: 37.5515217}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+
     // geoloc({lat: 55.817765,lng: 37.5515217}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
     // geoloc({lat: 55.817765,lng: 37.5515217}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
     // geoloc({lat: 55.817765,lng: 37.5515217}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
@@ -40,7 +48,7 @@ $(document).ready(function() {
     // geoloc({lat: 55.817765,lng: 37.5515217}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
 });
 
-function geoloc(id, coordonnees, nameStadium, imgStadium) {
+function geoloc(coordonnees, nameStadium, imgStadium) {
     // console.log(uluru,nameStadium,imgStadium);
     var newMap = document.createElement("div"); 
     newMap.id 
@@ -49,6 +57,7 @@ function geoloc(id, coordonnees, nameStadium, imgStadium) {
         center: coordonnees
     });
 
+    // <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
     var contentString = '<div >' +
         '<div ">' +
         '</div>' +

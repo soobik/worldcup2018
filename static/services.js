@@ -1,18 +1,6 @@
-$(function(){
-    // $.ajax({
-    //     url: "http://localhost:3091/get_equipes",
-    //     success : function(data){
-    //         console.log(data);
-    //         for (var cle in data){
-    //             $("#test").append('<img class="w-25" src='+data[cle].flag+'>' + data[cle].pays )
-    //         }
-    //     }
-    // });
-})
-
-
 var services = function(param){ 
     var service = "http://localhost:2004/";
+    // var myData = "";
     // console.log(service);
     // console.log(param)
     switch (param) {
@@ -32,19 +20,41 @@ var services = function(param){
             // console.log('error');
             break;
     }  
+
+    console.log("Avant myData");
+
+    myData = function(err, cb){
+        console.log('toto');
     $.ajax({
         type: 'GET',
         url: service,
-        success : function(data){
-            //console.log(data);
-            return data;
+        success : function(data, cb){
+            console.log("Dans success Ajax");
+            var cb = function(data){
+                console.log("dans le callback de success");
+            }
+            cb();
+            // datas = data;
+            
+            //return data;
         },
         failed : function(data, status){
             return false;
         }
-    })
+        });
+        
+       
+    }
+    
+    //myData();
+    console.log();
+    
+    var traitement = function(){
+        console.log("dans process");
+    }
+    
+    // console.log(myData);    
 }
-
 
 
 
