@@ -32,8 +32,9 @@ Vos sources de données doivent être au format JSON.
 * Chaque apprenant qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
 # Services disponibles
-* /....... Description
-* /....... Description
+* /get_groups recuperation des groupes
+* /get_equipes recuperation des equipes
+* /get_stadiums recuperation des stades
 
 ###
 # Démarrage du projet
