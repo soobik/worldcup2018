@@ -67,19 +67,33 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <h2 class="text-danger">Groupe A</h2>
+                    <!-- <h1>
+                        {{myObject}}
+                    </h1> -->
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <ul id="groupeA" class="list-inline col-md-12 text-center">
-                    <script>
-                        services("equipes", function (data) {
-                            console.log(data);
-                            for (var i = 0; i < 4; i++) {
-                                $('#groupeA').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
-                            }
-                        })
-                    </script>
-                </ul>
+                <div class="container-fluid col-md-12">
+                        <ul id="groupeA" class="list-inline  text-center">
+                            <script>
+                                services("equipes", function (data) {
+                                    console.log(data);
+                                    id = 0;
+                                    for (var i = 0; i < 4; i++) {
+                                        id += 1
+                                        $('#groupeA').append('<li class="test list-inline-item  col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + test + '</li>')
+                                    }
+                                })
+                                var test = services("groups", function (data) {
+                                        console.log(data.groups.a.matches);
+                                        $(".test").append('<p>' + data.groups.a.matches[0].home_result + '</p>')
+                                        // for (var i = 0; i < 4; i++) {
+                                        // }
+                                    })
+                            </script>
+                        </ul>
+                </div>
+
             </div>
             <!--GROUPE B-->
             <div class="row text-center">

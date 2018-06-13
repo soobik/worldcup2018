@@ -7,9 +7,14 @@ var parser = require('json-parser');
 var fs = require('fs');
 var port = require('./port.js');
 var route = require('./routes/routes.js')
+var mustacheExpress = require('mustache-express');
 
+app.engine('html', mustacheExpress());
+app.set('view engine', 'html');
+app.set('views', __dirname + '/');
 app.use(express.static('static'));
 app.use(route);
+
 
 /**
  * Route vers index.html
@@ -42,7 +47,13 @@ app.get('/match', function(req, res){
 app.get('/knockout', function(req, res){
     res.sendFile(__dirname + '/knockout.html');
 })
-
+/**
+ * Route vers score.html
+ */
+app.get('/score', function(req, res){
+    res.sendFile(__dirname+'/score.html');
+    // res.render('score.html', {})
+})
 /**
  * Route vers stadium.json
  */
