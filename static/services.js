@@ -1,5 +1,18 @@
-var reponse = "toto";
+var reponse = "";
 
+<<<<<<< HEAD
+var services = function(param,cb){ 
+    var service = "http://localhost:3012/";
+    switch (param) {
+        case 'equipes':
+            service = service+"get_equipes";
+            break;
+        case 'groups':
+            service = service+"get_groups";
+            break;
+        case 'knockout':
+            service = service+"get_knockout";
+=======
 var services = function (param, cb) {
     var service = "http://localhost:2004/";
     // var myData = "";
@@ -17,11 +30,11 @@ var services = function (param, cb) {
         case 'knockout':
             service = service + "get_knockout";
             // console.log(service);
+>>>>>>> worldcup2018/master
             break;
         case 'stadiums':
             service = service + "get_stadiums";
         default:
-            // console.log('error');
             break;
     }
 
