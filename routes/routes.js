@@ -25,6 +25,5 @@ var stadium = require('../stadiums.js');
 router.use('/get_stadiums', stadium);
 
 var joueurs = require('../joueurs.js');
-router.use('/get_joueurs', stadium);
-
+router.use('/get_joueurs', joueurs);
 module.exports = router;
