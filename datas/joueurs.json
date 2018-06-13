@@ -1,64 +1,10 @@
-[
+{
+  "joueurs": 
+  [
     {
-        "Argentine": {
-            "joueurs":{
-            "nomJoueur": "GUZMÁN Goalkeeper, un autre nom "
-            }
-          
-      }
-    },
-    {
-        "skills": {
-          "name": "CSS3",
-          "level": "expert"
-      }
-    },
-    {
-        "skills": {
-          "name": "Javascript",
-          "level": "debutant"
-      }
-    },
-    {
-        "skills": {
-          "name": "Node JS",
-          "level": "debutant"
-      }
-    },
-    {
-        "skills": {
-          "name": "Photoshop",
-          "level": "intermediaire"
-      }
-    },
-    {
-        "skills": {
-          "name": "WordPress",
-          "level": "intermediaire"
-      }
-    },
-    {
-        "skills": {
-          "name": "PHP",
-          "level": "debutant"
-      }
-    },
-    {
-        "skills": {
-            "name": "Python",
-            "level": "debutant"
-        }
-    },
-    {
-        "skills": {
-            "name": "Graphisme",
-            "level": "intermediaire"
-        }
-    },
-    {
-        "skills": {
-            "name": "Gestion de projet",
-            "level": "debutant"
-        } 
+      "id" : 1,
+      "nomJoueur": "Ángel Di María",
+      "pays" : "Argentine"
     }
   ]
+}

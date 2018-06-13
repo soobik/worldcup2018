@@ -11,14 +11,18 @@ $(function(){
                     //var scoreFinal = "";
 
                     if(listeJoueurs[i].country === 1){
-                       $('.liste_joueurs').append('<article class="col-md-6>"' + joueurs.nomJoueur + '</artcile>');
+                       joueur = joueurs.nomJoueur + joueurs.pays ;
                     }
 
-                    else{
-                        $('.liste_joueurs').append('<article class="col-md-6>"' + joueurs + '</artcile>');
+                    else if (listeJoueurs[i].country === 2){
+                        joueur = joueurs.nomJoueur + joueurs.pays ;
                     }
-                
+                    
+                    else if (listeJoueurs[i].country === 3){
+                        joueur = joueurs.nomJoueur + joueurs.pays ;
+                    }
                 };
+                $('.liste_joueurs').append('<li class="list-group-item">"' + joueurs.nomJoueur + ' ' + joueurs.pays +'</li>');
             },
             error: function (resultat, statut, erreur) {
     
