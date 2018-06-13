@@ -7,9 +7,16 @@
  */
 var reponse = "";
 var services = function (param, cb) {
+<<<<<<< HEAD
+    var service = "http://localhost:3005/";
+    // var myData = "";
+    // console.log(service);
+    // console.log(param)
+=======
 
     var service = "http://localhost:3012/";
 
+>>>>>>> worldcup2018/master
     switch (param) {
         case 'equipes':
             service = service + "get_equipes";
