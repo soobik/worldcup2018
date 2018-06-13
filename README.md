@@ -35,6 +35,12 @@ Vos sources de données doivent être au format JSON.
 * /get_groups recuperation des groupes
 * /get_equipes recuperation des equipes
 * /get_stadiums recuperation des stades
+* fonction service utilisation exemple : 
+    <script>
+        services("groups",function(data){
+            console.log(data);
+        })
+    </script>
 
 ###
 # Démarrage du projet
