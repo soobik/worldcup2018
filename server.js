@@ -5,7 +5,7 @@ const express = require('express');
 var parser = require('json-parser');
 var fs = require('fs');
 const app = express();
-const port = 2004;
+const port = 3999;
 var route = require('./routes/routes.js')
 
 app.use(express.static('static'));
@@ -22,27 +22,27 @@ app.get('/', function (req, res) {
  * Route vers equipe.html
  */
 app.get('/equipe', function(req, res){
-    res.sendfile(__dirname + '/equipe.html');
+    res.sendFile(__dirname + '/equipe.html');
 });
 /**
  *  Route vers match.html
  */
 app.get('/match', function(req, res){
-    res.sendfile(__dirname + '/match.html');
+    res.sendFile(__dirname + '/match.html');
 });
 
 /**
  * Route vers knockout.html
  */
 app.get('/knockout', function(req, res){
-    res.sendfile(__dirname + '/knockout.html');
+    res.sendFile(__dirname + '/knockout.html');
 })
 
 /**
  * Route vers stadium.json
  */
 app.get('/stadium', function(req, res){
-    res.sendfile(__dirname + '/datas/stadium.json');
+    res.sendFile(__dirname + '/datas/stadium.json');
 });
 /**
  * Route vers le fichier groups.json
