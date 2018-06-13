@@ -1,44 +1,37 @@
-var reponse = "toto";
 
+/**
+ * fonction qui en fonction du choix de l'utilisateur lors de l'appel de celle ci
+ * execute une fonction ajax qui recupere la data correspondant au choix de l'utilisateur
+ * @param {string} param 
+ * @param {function} cb 
+ */
+var reponse = "";
 var services = function (param, cb) {
-    var service = "http://localhost:2004/";
-    // var myData = "";
-    // console.log(service);
-    // console.log(param)
+    var service = "http://localhost:3012/";
     switch (param) {
         case 'equipes':
             service = service + "get_equipes";
-            // console.log(service);
             break;
         case 'groups':
             service = service + "get_groups";
-            // console.log(service);
             break;
         case 'knockout':
             service = service + "get_knockout";
-            // console.log(service);
             break;
         case 'stadiums':
             service = service + "get_stadiums";
         default:
-            // console.log('error');
             break;
     }
-
     myData(service, function (data) {
         reponse = data;
         console.log("dans process");
-        console.log("dans process " + reponse);
         cb(data);
-
-        //console.log(data);
-
     }, reponse)
 
-    console.log("apres mydata " + reponse);
+    console.log("apres mydata ");
 
     return reponse;
-
 }
 
 myData = function (service, cb, reponse) {
@@ -54,6 +47,4 @@ myData = function (service, cb, reponse) {
             return false;
         }
     });
-
-
 }

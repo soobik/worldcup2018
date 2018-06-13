@@ -24,4 +24,6 @@ router.use('/get_groups', groups);
 var stadium = require('../stadiums.js');
 router.use('/get_stadiums', stadium);
 
+var stadium = require('../joueurs.js');
+router.use('/get_joueurs', joueurs);
 module.exports = router;

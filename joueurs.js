@@ -21,6 +21,21 @@ $(function(){
                     else if (listeJoueurs[i].country === 3){
                         joueur = joueurs.nomJoueur + joueurs.pays ;
                     }
+                    else if (listeJoueurs[i].country === 4){
+                        joueur = joueurs.nomJoueur + joueurs.pays ;
+                    }
+                    else if (listeJoueurs[i].country === 5){
+                        joueur = joueurs.nomJoueur + joueurs.pays ;
+                    }
+                    else if (listeJoueurs[i].country === 6){
+                        joueur = joueurs.nomJoueur + joueurs.pays ;
+                    }
+                    else if (listeJoueurs[i].country === 7){
+                        joueur = joueurs.nomJoueur + joueurs.pays ;
+                    }
+                    else if (listeJoueurs[i].country === 8){
+                        joueur = joueurs.nomJoueur + joueurs.pays ;
+                    }
                 };
                 $('.liste_joueurs').append('<li class="list-group-item">"' + joueurs.nomJoueur + ' ' + joueurs.pays +'</li>');
             },
