@@ -3,41 +3,19 @@
     $(document).ready(function() {
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:3002/joueurs',
+            url: 'http://localhost:4002/get_joueurs',
             success: function (listeJoueurs) {
-                for (var i = 0; i < listeJoueurs.length; i++) {
-                    var joueurs = "";
-                   // var matchEnCours = "";
-                    //var scoreFinal = "";
-
-                    if(listeJoueurs[i].country === 1){
-                       joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
-
-                    else if (listeJoueurs[i].country === 2){
-                        joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
+                for (var i = 0; i < listeJoueurs.joueurs.length; i++) {
                     
-                    else if (listeJoueurs[i].country === 3){
-                        joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
-                    else if (listeJoueurs[i].country === 4){
-                        joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
-                    else if (listeJoueurs[i].country === 5){
-                        joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
-                    else if (listeJoueurs[i].country === 6){
-                        joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
-                    else if (listeJoueurs[i].country === 7){
-                        joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
-                    else if (listeJoueurs[i].country === 8){
-                        joueur = joueurs.nomJoueur + joueurs.pays ;
-                    }
+                    var player = "";
+                   
+                     if(listeJoueurs.joueurs[i] === 1){
+                        player = joueurs.nomJoueur + joueurs.pays;
+                     }
+
+                    $('#liste_joueurs').append('<li class="list-group-item"><h2>' + listeJoueurs.joueurs[i].nomJoueur + '<h2> ' + listeJoueurs.joueurs[i].pays+ '</li>');
                 };
-                $('.liste_joueurs').append('<li class="list-group-item">"' + joueurs.nomJoueur + ' ' + joueurs.pays +'</li>');
+                
             },
             error: function (resultat, statut, erreur) {
     
