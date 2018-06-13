@@ -31,7 +31,7 @@ Vos sources de données doivent être au format JSON.
 * Mettre à jour le README avec une partie "TODO".
 * Chaque apprenant qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
-#Services disponibles
+# Services disponibles
 * /....... Description
 * /....... Description
 
