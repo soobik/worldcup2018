@@ -1,25 +1,18 @@
-var reponse = "toto";
+var reponse = "";
 
 var services = function(param,cb){ 
-    var service = "http://localhost:2004/";
-    // var myData = "";
-    // console.log(service);
-    // console.log(param)
+    var service = "http://localhost:3012/";
     switch (param) {
         case 'equipes':
             service = service+"get_equipes";
-            // console.log(service);
             break;
         case 'groups':
             service = service+"get_groups";
-            // console.log(service);
             break;
         case 'knockout':
             service = service+"get_knockout";
-            // console.log(service);
             break;
         default:
-            // console.log('error');
             break;
     }  
     
