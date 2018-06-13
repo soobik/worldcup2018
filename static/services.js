@@ -7,7 +7,9 @@
  */
 var reponse = "";
 var services = function (param, cb) {
+
     var service = "http://localhost:3012/";
+
     switch (param) {
         case 'equipes':
             service = service + "get_equipes";
@@ -20,6 +22,10 @@ var services = function (param, cb) {
             break;
         case 'stadiums':
             service = service + "get_stadiums";
+            break;
+        case 'joueurs':
+            service = service + "get_joueurs";
+            break;
         default:
             break;
     }

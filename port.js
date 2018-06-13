@@ -1,5 +1,5 @@
 //Port d'écoute du serveur
-const port = 3005;
+const port = 1777;
 
 
 module.exports = port;
