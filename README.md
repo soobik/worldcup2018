@@ -31,6 +31,11 @@ Vos sources de données doivent être au format JSON.
 * Mettre à jour le README avec une partie "TODO".
 * Chaque apprenant qui complète une tâche doit la marquer comme "Terminé" dans le README.
 
+# Services disponibles
+* /get_groups recuperation des groupes
+* /get_equipes recuperation des equipes
+* /get_stadiums recuperation des stades
+
 ###
 # Démarrage du projet
 * Fork du projet initial sur votre compte github

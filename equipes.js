@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs')
 var router = express.Router();
 
 //TODO : rendre dynamique une fois que ça fonctione
@@ -15,15 +16,69 @@ var equipes = [
     }
 ];
 
+//fonction asynchrone
+function _get_equipe_from_json_async(){
+    fs.readFile(__dirname+"/datas/equipes.json", "UTF-8",function read(err, data){
+        if(err)
+       {
+           throw err;
+       } 
+       equipes = data;
+       //console.log(equipes);
+       processFile();
+   });
+
+}
+
+
+
+function processFile(){
+   //
+   
+}
+
+function getEquipeById(id){
+    var id_in_json = 0;
+    id_in_json = id - 1;
+
+    if(id != undefined)
+    {
+        equipes = fs.readFileSync(__dirname+"/datas/equipes.json"); 
+        equipe = JSON.parse(equipes); 
+        equipe = equipe[id_in_json]; 
+        console.log(equipe);
+    } 
+    return equipe;
+}
 
 //Routes
+/**
+ * Affiche les équipes en fonction de leurs id passer en parametre
+ * dans l'url 
+ * exemple : http://localhost:3012/get_equipes/1 ou 2 ou 3 etc...
+ */
 router.get('/', function(req, res){
-   res.json(equipes);
+   //_get_equipe_from_json();
+   var json_a_envoyer = "";
+   equipes = fs.readFileSync(__dirname+"/datas/equipes.json");
+   equipes = JSON.parse(equipes);
+   //json_a_envoyer = getEquipeById([id]);
+   json_a_envoyer = equipes
+   res.json(json_a_envoyer);
+
+   //test getEquipeById()
+    // json_a_envoyer = getEquipeById(4);
+    //
 });
-
-
+// route pour les equipes en passant id en param url
+// exemple : http://localhost:port/get_equipes/1 ou 2 etc ...
+router.get('/:id',function(req, res){
+    var id = req.params.id;
+    var result ="";
+    result = getEquipeById(id)
+    res.json(result);
+})
 
 //Exporte les routes
 module.exports = router;
-
 
