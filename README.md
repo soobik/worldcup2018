@@ -40,9 +40,12 @@ Vos sources de données doivent être au format JSON.
 # Démarrage du projet
 * Fork du projet initial sur votre compte github
 * Clonage du projet sur votre ordi: 
-    git clone https://github.com/<votre-repository>/worldcup2018.git
+    git clone https://github.com/(votre-repository)/worldcup2018.git 
+    /*\ATTENTION /!\ remplacez (votre -repository) par votre nom d'utilisateur sinon ça ne marchera pas !
 * Ajoutez à votre fork le remote du projet d'origine
     git remote add worldcup2018 https://github.com/soobik/worldcup2018.git
+* /*\ATTENTION /!\ Si vous recommencez depuis le début, installez le module grâce à la commande "npm install" pour pouvoir lancer le serveur.
+
 # N'oubliez pas vos git add et git commit régulier
 # Push
 * Mettez à jour votre fork en local: 

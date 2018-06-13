@@ -7,7 +7,7 @@ var router = express.Router();
  * Affiche la totalité des groupes et leurs détails
  */
 function getGroups() {
-  groups = fs.readFileSync(__dirname+"/datas/groups.json");
+  groups = fs.readFileSync(__dirname + "/datas/groups.json");
   group = JSON.parse(groups);
   console.log(group)
   return group;
@@ -16,7 +16,7 @@ function getGroups() {
 /**
  * Affiche les groupes en fonction de leurs lettre a, b, c etc ...
  */
-function getGroupsLetter(lettre){
+function getGroupsLetter(lettre) {
   group = getGroups();
   groups = group.groups[lettre];
   console.log(groups);
@@ -25,23 +25,24 @@ function getGroupsLetter(lettre){
 /**
  * Route pour afficher tout les groupes
  */
-router.get('/', function(req, res){
+router.get('/', function (req, res) {
   var result = "";
   result = getGroups()
   res.json(result);
-  
+
 })
 /**
  * Route pour afficher les groupes en fonction de leurs 
  * lettre passer en paramétre dans l'url
  * exemple : http://localhost:3012/get_groups/a ou b ou c etc...
  */
-router.get('/:lettre', function(req, res){
+router.get('/:lettre', function (req, res) {
   var lettre = req.params.lettre;
   console.log(lettre)
   var result = "";
   result = getGroupsLetter(lettre);
   res.json(result);
 })
+
 
 module.exports = router
