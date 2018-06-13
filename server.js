@@ -2,10 +2,10 @@
  * Initialisation du serveur + ajout d'express
  */
 const express = require('express');
+const app = express();
 var parser = require('json-parser');
 var fs = require('fs');
-const app = express();
-const port = 3999;
+var port = require('./port.js');
 var route = require('./routes/routes.js')
 
 app.use(express.static('static'));
