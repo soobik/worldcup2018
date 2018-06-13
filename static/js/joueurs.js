@@ -13,7 +13,7 @@
                         player = joueurs.nomJoueur + joueurs.pays;
                      }
 
-                    $('#liste_joueurs').append('<li class="list-group-item"><h2>' + listeJoueurs.joueurs[i].nomJoueur + '<h2> ' + listeJoueurs.joueurs[i].pays+ '</li>');
+                    $('#liste_joueurs').append('<li class="list-group-item"><h4>' + listeJoueurs.joueurs[i].nomJoueur + '</h4> ' + listeJoueurs.joueurs[i].pays+ '</li>');
                 };
                 
             },
