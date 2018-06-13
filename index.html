@@ -13,13 +13,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
     <script src="services.js"></script>
+    <script src="js/equipes.js"></script>
 </head>
 
 <body>
@@ -49,8 +51,8 @@
                             <a class="nav-link" href="equipe">Equipes</a>
                         </li>
                         <li class="nav-item m-5">
-                                <a class="nav-link" href="match">Match</a>
-                            </li>
+                            <a class="nav-link" href="match">Match</a>
+                        </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="knockout">Knockout</a>
                         </li>
@@ -69,54 +71,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <!-- groupe A 4 equipe ajout drapeau + pays -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placés pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2 id="test">
-                                        
-                                    </h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <!-- groupe B 4 equipe ajout drapeau + pays -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>
-                                        <script>
-                                            services("equipes", function(data){
-                                                console.log("dans la vue 1 " + data.id);
-                                            });
-                                            
-                                            
-                                            // console.log(services("knockout"));
-                                            // console.log(services("groups"));
-
-                                        </script>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeA" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 0; i < 4; i++) {
+                                $('#groupeA').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <!--GROUPE B-->
             <div class="row text-center">
@@ -125,39 +89,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeB" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 4; i < 8; i++) {
+                                $('#groupeB').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -165,40 +106,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <!-- groupe c 4 equipe ajout drapeau + pays -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeC" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 8; i < 12; i++) {
+                                $('#groupeC').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -206,42 +123,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <!-- groupe D 4 equipe ajout drapeau + pays date et heure-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeD" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 12; i < 16; i++) {
+                                $('#groupeD').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -249,40 +140,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <!-- groupe E 4 equipe ajout drapeau + pays date et heure-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeE" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 16; i < 20; i++) {
+                                $('#groupeE').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -290,41 +157,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <!-- groupe F 4 equipe ajout drapeau + pays date et heure-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeF" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 20; i < 24; i++) {
+                                $('#groupeF').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -332,40 +174,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <!-- groupe G 4 equipe ajout drapeau + pays date et heure-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeG" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 24; i < 28; i++) {
+                                $('#groupeG').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -373,41 +191,16 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-                <article class="col-md-6 col-sm-12">
-                    <!-- groupe H 4 equipe ajout drapeau + pays date et heure-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <!--image et text placé pour le design  mais a faire afficher avec le javascript-->
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </article>
-                <article class=" col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <img src="img/russie.png">
-                                    <h2>Nom de l'équipe s'affiche ici</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ul id="groupeH" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 28; i < 32; i++) {
+                                $('#groupeH').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
         </section>
     </main>
@@ -433,10 +226,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
 </body>
 
 </html>
