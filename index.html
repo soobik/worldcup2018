@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -50,8 +51,8 @@
                             <a class="nav-link" href="equipe">Equipes</a>
                         </li>
                         <li class="nav-item m-5">
-                                <a class="nav-link" href="match">Match</a>
-                            </li>
+                            <a class="nav-link" href="match">Match</a>
+                        </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="knockout">Knockout</a>
                         </li>
@@ -72,8 +73,11 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeA" class="list-inline col-md-12 text-center">
                     <script>
-                        services("equipes", function(data){
+                        services("equipes", function (data) {
                             console.log(data);
+                            for (var i = 0; i < 4; i++) {
+                                $('#groupeA').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
                         })
                     </script>
                 </ul>
@@ -86,6 +90,15 @@
             </div>
             <div class="row border mb-3 p-3">
                 <ul id="groupeB" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 4; i < 8; i++) {
+                                $('#groupeB').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -94,6 +107,15 @@
             </div>
             <div class="row border mb-3 p-3">
                 <ul id="groupeC" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 8; i < 12; i++) {
+                                $('#groupeC').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -102,6 +124,15 @@
             </div>
             <div class="row border mb-3 p-3">
                 <ul id="groupeD" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 12; i < 16; i++) {
+                                $('#groupeD').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -110,6 +141,15 @@
             </div>
             <div class="row border mb-3 p-3">
                 <ul id="groupeE" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 16; i < 20; i++) {
+                                $('#groupeE').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -118,6 +158,15 @@
             </div>
             <div class="row border mb-3 p-3">
                 <ul id="groupeF" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 20; i < 24; i++) {
+                                $('#groupeF').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -126,6 +175,15 @@
             </div>
             <div class="row border mb-3 p-3">
                 <ul id="groupeG" class="list-inline col-md-12 text-center">
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 24; i < 28; i++) {
+                                $('#groupeG').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -134,7 +192,15 @@
             </div>
             <div class="row border mb-3 p-3">
                 <ul id="groupeH" class="list-inline col-md-12 text-center">
-
+                    <script>
+                        services("equipes", function (data) {
+                            console.log(data);
+                            for (var i = 28; i < 32; i++) {
+                                $('#groupeH').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
+                            }
+                        })
+                    </script>
+                </ul>
             </div>
         </section>
     </main>
