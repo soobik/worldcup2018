@@ -18,6 +18,11 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
     
 });
+
+app.get('/stadiums', function (req, res) {
+    res.sendFile(__dirname + '/stadium.html');
+    
+});
 /**
  * Route vers equipe.html
  */
@@ -36,7 +41,7 @@ app.get('/match', function(req, res){
  */
 
 app.get('/joueurs', function(req, res){
-    res.sendFile(__dirname + '/liste-joueurs.html');
+    res.sendFile(__dirname + '/joueurs.html');
 });
 /**
  * Route vers knockout.html
