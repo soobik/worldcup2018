@@ -1,7 +1,7 @@
 var reponse = "toto";
 
 var services = function (param, cb) {
-    var service = "http://localhost:2004/";
+    var service = "http://localhost:3005/";
     // var myData = "";
     // console.log(service);
     // console.log(param)
@@ -20,6 +20,10 @@ var services = function (param, cb) {
             break;
         case 'stadiums':
             service = service + "get_stadiums";
+            break;
+        case 'joueurs':
+            service = service + "get_joueurs";
+            break;
         default:
             // console.log('error');
             break;

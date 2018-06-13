@@ -18,6 +18,11 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
     
 });
+
+app.get('/stadiums', function (req, res) {
+    res.sendFile(__dirname + '/stadium.html');
+    
+});
 /**
  * Route vers equipe.html
  */
