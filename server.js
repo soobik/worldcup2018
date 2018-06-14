@@ -43,6 +43,13 @@ app.get('/match', function(req, res){
 });
 
 /**
+ * Route vers page résultat
+ */
+
+app.get('/joueurs', function(req, res){
+    res.sendFile(__dirname + '/joueurs.html');
+});
+/**
  * Route vers knockout.html
  */
 app.get('/knockout', function(req, res){
