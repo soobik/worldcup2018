@@ -12,7 +12,7 @@
 
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:3002/get_joueurs',
+            url: 'http://localhost:5002/get_joueurs',
             success: function (listeJoueurs) {
                 for (var i = 0; i < listeJoueurs.joueurs.length; i++) {
                     //recupere les joueurs
@@ -22,7 +22,7 @@
                         player = joueurs.nomJoueur + joueurs.id_equipes;
                      }
 
-                    $('#liste_joueurs').append('<li class="list-group-item"><h4>' + listeJoueurs.joueurs[i].nomJoueur + '</h4>' + equipes[listeJoueurs.joueurs[i].id_equipes].pays +  '</p><img class="player_flag" src="' + equipes[listeJoueurs.joueurs[i].id_equipes].flag + '" /></li>');
+                    $('#liste_joueurs').append('<li class="list-group-item"><h4>' + listeJoueurs.joueurs[i].nomJoueur + '</h4>' + equipes[listeJoueurs.joueurs[i].id_equipes-1].pays +  '</p><img class="player_flag" src="' + equipes[listeJoueurs.joueurs[i].id_equipes-1].flag + '" /></li>');
                 };
                 
             },

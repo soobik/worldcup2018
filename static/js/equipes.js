@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3002/get_equipes',
+        url: 'http://localhost:5002/get_equipes',
         success: function (listeEquipe) {
             for (var i = 0; i < listeEquipe.length; i++) {
                 console.log(listeEquipe);
