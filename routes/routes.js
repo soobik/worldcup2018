@@ -29,7 +29,7 @@ router.use('/get_stadiums', stadium);
 var score = require('../score.js');
 router.use('/get_scores', score);
 
-// var joueurs = require('../joueurs.js');
-// router.use('/get_joueurs', stadium);
+var joueurs = require('../joueurs.js');
+router.use('/get_joueurs', joueurs);
 
 module.exports = router;
