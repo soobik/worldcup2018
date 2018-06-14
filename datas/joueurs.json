@@ -1,0 +1,21 @@
+{
+  "joueurs": 
+  [
+    {
+      "id": 1,
+      "nomJoueur": "JJJJJ",
+      "id_equipe": 1
+    },
+    {
+      "id": 2,
+      "nomJoueur": "JJJJJ",
+      "id_equipe": 2
+    },
+    {
+      "id": 3,
+      "nomJoueur": "JJJJJ",
+      "id_equipe": 3
+    }
+ 
+  ]
+}

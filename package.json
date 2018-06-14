@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "json-parser": "^1.1.5",
+    "mustache-express": "^1.2.6",
     "nodemon": "^1.17.5"
   }
 }

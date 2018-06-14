@@ -1,74 +1,47 @@
 
-/*AJOUT DYNAMIQUE DES TITRES AVEC ID DANS LE HTML*/
+// DYNAMISER LES TITRES AVEC UNE BOUCLE POUR SIMPLIFIER LE CODE
 
-
-//ROUND OF 16
-
-$(function () {
-    services("knockout", function (data) {
-        console.log(data.knockout.round_16.name);
-        $('#round').append(data.knockout.round_16.name);
-    })
-});
-
-
-//QUARTER-FINALS
-
-$(function () {
-    services("knockout", function (data) {
-        console.log(data.knockout.round_8.name);
-        $('#quarter').append(data.knockout.round_8.name);
-    })
-});
-
-
-//SEMI-FINALS
 
 
 $(function () {
     services("knockout", function (data) {
-        console.log(data.knockout.round_4.name);
-        $('#semi').append(data.knockout.round_4.name);
+
+        var rounds = data.knockout;
+        var monhtml = "";
+console.log( data.knockout)
+        //je boucle ici
+        var compteur = 0;
+        $.each(rounds, function (index, value) {
+           
+            console.log(value.name);
+            monhtml = "<span>" + value.name + "</span>";
+            
+            // condition intermédiaire pour modifier les id pour appliquer l'affichage des rounds
+            
+            if (compteur == 0){
+                $('#montest0').append(monhtml);
+            }
+            if (compteur == 1){
+                $('#montest1').append(monhtml);
+            }
+            if (compteur == 2){
+                $('#montest2').append(monhtml);
+            }
+            if (compteur == 3){
+                $('#montest3').append(monhtml);
+            }
+            if (compteur == 4){
+                $('#montest4').append(monhtml);
+            }
+
+            compteur = compteur +1;
+            // permet de remettre à zero la boucle  
+            monhtml="";
+        });
+        //boucle fini ici
+
     })
 });
 
 
-//THIRD PLACE PLAY-OFF
-
-
-$(function () {
-    services("knockout", function (data) {
-        console.log(data.knockout.round_2_loser.name);
-        $('#third').append(data.knockout.round_2_loser.name);
-    })
-});
-
-
-
-//FINAL
-
-
-$(function () {
-    services("knockout", function (data) {
-        console.log(data.knockout.round_2.name);
-        $('#final').append(data.knockout.round_2.name);
-    })
-});
-
-
-
-
-/*AJOUT DYNAMIQUE DES SCORES AVEC ID DANS LE HTML*/
-
-
-
-//ROUND OF 16
-
-
-$(function () {
-    services("knockout", function (data) {
-        console.log(data.knockout.home_result + " " + data.knockout.away_result);
-        $('#score1').append(data.knockout.home_result + " " + data.knockout.away_result);
-    })
-});
-
+// FIN DE LA BOUCLE
