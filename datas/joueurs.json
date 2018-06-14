@@ -6,8 +6,7 @@
       "nomJoueur": "Fedor SMOLOV",
       "pays" : "Russie",
       "id_equipes": 1
-      
-      
+ 
     },
     {
       "id" : 2,
@@ -196,8 +195,5 @@
       "pays" : "Senegal",
       "id_equipes": 32
     }
-    
-
-
   ]
 }

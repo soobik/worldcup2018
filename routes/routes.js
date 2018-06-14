@@ -31,5 +31,8 @@ router.use('/get_scores', score);
 
 var joueurs = require('../joueurs.js');
 router.use('/get_joueurs', joueurs);
+<<<<<<< HEAD
 
+=======
+>>>>>>> worldcup2018/master
 module.exports = router;

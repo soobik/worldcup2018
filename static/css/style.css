@@ -23,6 +23,9 @@ body {
         background: #4f9cef;
 }
 
+.logo{
+        width: 100px;
+        }
 /*=================================
         MAIN
 ====================================*/
@@ -33,16 +36,23 @@ h2.text-danger {
 }
 
 /******** PAGE KNOCKOUT ********/
-/* .list-group{
-        margin-top: 200px; 
-} */
-    
+   
 .title-knock{
         margin-bottom: 50px; 
  }
 
-
-
 .modal-content.modal-height{
          height: 800px !important ; 
  }
+
+
+ /******* PAGE JOUEURS *******/
+
+ .player_flag {
+         width: 80px;
+         height: 80px;
+         float: right;
+         position: relative;
+         bottom: 35px; 
+}
+
