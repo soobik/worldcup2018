@@ -44,5 +44,4 @@ router.get('/:lettre', function (req, res) {
   res.json(result);
 })
 
-
 module.exports = router
