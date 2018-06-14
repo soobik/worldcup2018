@@ -19,4 +19,5 @@ router.get('/', function(req, res){
     result = getStadium();
     res.json(result);
 })
+
 module.exports = router
