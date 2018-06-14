@@ -2,8 +2,8 @@
 $(document).ready(function() {
     // function trierList (listJoueurs) {
     //     listJoueurs.sort(function (a, b) {
-    //         return a.id - b.id;
-    //       });
+    //          return a.id - b.id;
+    //        });
     // }
     var url = 'http://localhost:5002/';
     var service_get_equipe = 'get_equipes';
@@ -12,7 +12,7 @@ $(document).ready(function() {
         type: 'GET',
         url: url+service_get_equipe,
         success: function (listeEquipe) {
-            trierList (listJoueurs)
+            // trierList (listJoueurs);
             for (var i = 0; i < listeEquipe.length; i++) {
                 console.log(listeEquipe);
                 //recupere les joueurs
