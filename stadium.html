@@ -65,12 +65,13 @@
 
     <main>
 
-        <div class=" row list-group text-center">
+        <div class=" row list-group text-center d-flex justify-content-center">
 
             <h2 class="text-center mt-5 text-danger mb-5 "> Liste des stades</h2>
 
-            <div class="container stades">
+            <div class="container d-flex justify-content-center ligne">
 
+                <ul class="stades list-group"> </ul>
 
             </div>
 
@@ -123,21 +124,27 @@
                 // tabNameStadium.push(imgStadium);
 
                 // integration dans la page html
-                $(".stades").append("<h4>" + nameStadium + "</h4>")
-                $(".stades").append("<img src=" + imgStadium + " class='w-25 '>")
-                $(".stades").append("<p class='p-3 lead'>" + cityStadium + "</p> </hr>")
+            
+                $(".stades").append("<li class='list-group-item'><h2>" + nameStadium + "</h2></li>")
+
+                $(".stades").append("<li class='list-group-item'> <img src=" + imgStadium + " class='w-25 ' </li>")
+
+                $(".stades").append("<li class='list-group-item'><p class='p-3 mb-0 lead'><span class='font-weight-bold'> Lieu : </span> " + cityStadium + "</p>  ")
 
                 //afficher dynamiquement les stades en récupérant les données grâce au bouton via dataset
-                $(".stades").append("  <button type='button' id='test" + i + "' data-toggle='modal' data-target='#exampleModalCenter' data-lat="+latStadium+" data-lng="+lngStadium+" data-imgstadium="+imgStadium+" data-namestadium="+nameStadium+">voir plus </button>")
+                $(".stades").append("  <button type='button' id='test" + i + "' data-toggle='modal' data-target='#exampleModalCenter' data-lat="+latStadium+" data-lng="+lngStadium+" data-imgstadium="+imgStadium+" data-namestadium="+nameStadium+" class='mb-3 mt-3 btn btn-primary w-50 mx-auto'>Voir emplacement "+nameStadium+"</button> </li>  </div> <hr> ")
+       
                 
                 
                 $("#test" + i).click(function (e) {
                     // parseFloat = transforme une chaîne de caractère en nombre
                     var locStadium = {lat:parseFloat(this.dataset.lat),lng:parseFloat(this.dataset.lng)};
-                   
+                    
+                    // $("#exampleModalLongTitle").append("<h4>" + this.dataset.nameStadium + "</h4>")
                    
                     geoloc(locStadium, this.dataset.namestadium, this.dataset.imgstadium);
                     console.log(this.dataset.imgstadium)
+                  
                 })
 
             }
