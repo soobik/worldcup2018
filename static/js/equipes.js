@@ -14,7 +14,7 @@ $(document).ready(function() {
                         equipe = flag + pays;
                     }
 
-                $('#liste_equipe').append('<article class="col-md-3 m-3 border"><p><img class="w-100" src="' + listeEquipe[i].flag+ '" /><h2 class="nom_pays text-center text-primary">'  + listeEquipe[i].pays + '</h2> </p></article>');
+                $('#liste_equipe').append('<article class="col-md-2 m-3 border"><p><img class="w-100" src="' + listeEquipe[i].flag+ '" /><h2 class="nom_pays text-center text-primary">'  + listeEquipe[i].pays + '</h2> </p></article>');
                 
             };
             

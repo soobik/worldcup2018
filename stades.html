@@ -1,27 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>WorldCup 2018</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+    <script src="js/listeStadium.js"></script>
 </head>
-  <body>
-      <!--HEADER-->
-      <!--Menu-->
+
+<body>
+    <!--HEADER-->
+    <!--Menu-->
     <header class="container-fluid bg-primary">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                <a class="navbar-brand" href="/">
-                    <img src="img/logo-2018.jpg" class="rounded logo"></a>
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo-2018.jpg" class="w-50 rounded">
+                </a>
                 <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,48 +38,45 @@
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active m-5">
-                            <a class="nav-link" href="/">Accueil
+                            <a class="nav-link" href="#">Accueil
+                                <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <!--  <li class="nav-item m-5">
-                            <a class="nav-link" href="#">Groupes</a>
-                        </li>-->
+                        <a class="nav-link" href="#">Groupes</a>
+                    </li>-->
                         <li class="nav-item m-5">
                             <a class="nav-link" href="equipe">Equipes</a>
                         </li>
                         <li class="nav-item m-5">
-                            <a class="nav-link" href="match">Matchs</a>
-                        </li>
+                                <a class="nav-link" href="match">Match</a>
+                            </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="knockout">Knockout</a>
                         </li>
-                        <li class="nav-item m-5">
-                            <a class="nav-link" href="stadiums">Stades</a>
-                        </li>
-                        <li class="nav-item m-5">
-                            <a class="nav-link" href="joueurs">Joueurs</a>
-                        </li>
+                       
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-      <!--MAIN--> 
+
+    <!--MAIN-->
     <main>
-        <section class="container">
-            <div class="row mt-5 justify-content-center" id="liste_equipe"> <!--Ligne 1-->
+        <section class="container mt-5">
+        <div id="stades"></div>
                
-            </div>
         </section>
     </main>
-      <!--FOOTER--> 
+
+    <!--FOOTER-->
     <footer class="container-fluid bg-dark mt-5">
         <div class="container">
             <div class="row justify-content-center text-center text-white p-3">
                 <ul class="list-inline">
                     <li class="list-inline-item mt-1">
                         &copy; 2018 WORLDCUP
-                    </li>    
+                    </li>
                     <li class="list-inline-item">
                         <a href="#" class="badge badge-dark">Privacy</a>
                     </li>
@@ -84,15 +90,10 @@
             </div>
         </div>
     </footer>
-      
-    <!-- Optional JavaScript <div class="container">
-            <p>&copy 2018</p>
-        </div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script src="js/equipes.js"></script> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
 </body>
+
 </html>

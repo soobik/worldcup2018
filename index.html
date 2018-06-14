@@ -6,13 +6,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -29,8 +29,8 @@
     <header class="container-fluid bg-primary">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo-2018.jpg" class="w-50 rounded">
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo-2018.jpg" class="rounded logo">
                 </a>
                 <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -39,21 +39,23 @@
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active m-5">
-                            <a class="nav-link" href="#">Accueil
-                                <span class="sr-only">(current)</span>
+                            <a class="nav-link" href="/">Accueil
                             </a>
                         </li>
                         <!--  <li class="nav-item m-5">
-                        <a class="nav-link" href="#">Groupes</a>
-                    </li>-->
+                            <a class="nav-link" href="#">Groupes</a>
+                        </li>-->
                         <li class="nav-item m-5">
                             <a class="nav-link" href="equipe">Equipes</a>
                         </li>
                         <li class="nav-item m-5">
-                            <a class="nav-link" href="match">Match</a>
+                            <a class="nav-link" href="match">Matchs</a>
                         </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="knockout">Knockout</a>
+                        </li>
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="stadiums">Stades</a>
                         </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="joueurs">Joueurs</a>
@@ -75,6 +77,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeA" class="list-inline col-md-12 text-center">
                     <script>
+                    //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             console.log(data);
                             for (var i = 0; i < 4; i++) {
@@ -93,6 +96,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeB" class="list-inline col-md-12 text-center">
                     <script>
+                        //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             for (var i = 4; i < 8; i++) {
                                 $('#groupeB').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
@@ -109,6 +113,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeC" class="list-inline col-md-12 text-center">
                     <script>
+                        //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             for (var i = 8; i < 12; i++) {
                                 $('#groupeC').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
@@ -125,6 +130,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeD" class="list-inline col-md-12 text-center">
                     <script>
+                        //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             for (var i = 12; i < 16; i++) {
                                 $('#groupeD').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
@@ -141,6 +147,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeE" class="list-inline col-md-12 text-center">
                     <script>
+                        //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             for (var i = 16; i < 20; i++) {
                                 $('#groupeE').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
@@ -157,6 +164,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeF" class="list-inline col-md-12 text-center">
                     <script>
+                        //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             for (var i = 20; i < 24; i++) {
                                 $('#groupeF').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
@@ -173,6 +181,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeG" class="list-inline col-md-12 text-center">
                     <script>
+                        //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             for (var i = 24; i < 28; i++) {
                                 $('#groupeG').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
@@ -189,6 +198,7 @@
             <div class="row border mb-3 p-3">
                 <ul id="groupeH" class="list-inline col-md-12 text-center">
                     <script>
+                        //    code pour faire afficher le nom des equipes et leur drapeaux 
                         services("equipes", function (data) {
                             for (var i = 28; i < 32; i++) {
                                 $('#groupeH').append('<li class="list-inline-item col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + '</li>')
