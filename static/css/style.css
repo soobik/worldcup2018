@@ -41,12 +41,6 @@ h2.text-danger {
         margin-bottom: 50px; 
  }
 
-
- .moda .modal-dialog .modal-dialog-centered .modal-content{
-         width: 1000px!important;
-         height: 800px;
- }
-
- .modal img {
-         width: 100%;
+.modal-content.modal-height{
+         height: 800px !important ; 
  }
