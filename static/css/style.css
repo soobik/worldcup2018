@@ -53,3 +53,7 @@ h2.text-danger {
          bottom: 35px; 
 }
 
+.nom_pays {
+        font-family: 'Rancho', cursive;
+}        
+
