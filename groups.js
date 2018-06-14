@@ -1,42 +1,47 @@
 var express = require('express');
+var fs = require('fs');
 var router = express.Router();
 
-var groups = [
-    {
-        "name": "Group A",
-        "winner": null,
-        "runnerup": null,
-        "matches": [
-          {
-            "name": 1,
-            "type": "group",
-            "home_team": 1,
-            "away_team": 2,
-            "home_result": null,
-            "away_result": null,
-            "date": "2018-06-14T18:00:00+03:00",
-            "stadium": 1,
-            "finished": false,
-            "matchday": 1
-          },
-          {
-            "name": 2,
-            "type": "group",
-            "home_team": 3,
-            "away_team": 4,
-            "home_result": null,
-            "away_result": null,
-            "date": "2018-06-15T17:00:00+05:00",
-            "stadium": 12,
-            "finished": false,
-            "matchday": 1
-          }
-        ]
-    }
-];
 
-router.get('/', function(req, res){
-    res.json(groups);
+/**
+ * Affiche la totalité des groupes et leurs détails
+ */
+function getGroups() {
+  groups = fs.readFileSync(__dirname + "/datas/groups.json");
+  group = JSON.parse(groups);
+  console.log(group)
+  return group;
+
+}
+/**
+ * Affiche les groupes en fonction de leurs lettre a, b, c etc ...
+ */
+function getGroupsLetter(lettre) {
+  group = getGroups();
+  groups = group.groups[lettre];
+  console.log(groups);
+  return groups;
+}
+/**
+ * Route pour afficher tout les groupes
+ */
+router.get('/', function (req, res) {
+  var result = "";
+  result = getGroups()
+  res.json(result);
+
+})
+/**
+ * Route pour afficher les groupes en fonction de leurs 
+ * lettre passer en paramétre dans l'url
+ * exemple : http://localhost:3012/get_groups/a ou b ou c etc...
+ */
+router.get('/:lettre', function (req, res) {
+  var lettre = req.params.lettre;
+  console.log(lettre)
+  var result = "";
+  result = getGroupsLetter(lettre);
+  res.json(result);
 })
 
 module.exports = router

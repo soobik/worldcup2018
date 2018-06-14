@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU7TrL1XhvGDzxUIwQHhDTYj6xsdRnhN0"></script>
+    <!-- lien bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- lien jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-- lien script bootstrap  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- lein service.js  -->
+    <script src="services.js"></script>
+    <script src="js/geoloc.js"></script>
+</head>
+
+<body>
+    <!--Menu-->
+    <header class="container-fluid bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo-2018.jpg" class="w-50 rounded">
+                </a>
+                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active m-5">
+                            <a class="nav-link" href="#">Accueil
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <!--  <li class="nav-item m-5">
+                            <a class="nav-link" href="#">Groupes</a>
+                        </li>-->
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="equipe">Equipes</a>
+                        </li>
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="match">Match</a>
+                        </li>
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="knockout">Knockout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class=" row list-group text-center">
+
+            <h2 class="text-center mt-5 text-danger mb-5 "> Liste des stades</h2>
+
+            <div class="container stades">
+
+
+            </div>
+
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content modal-height">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body " id="map">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var tabGeoloc = [];
+
+
+
+        services("stadiums", function (data) {
+
+            // boucle qui permet d'afficher chaque stade
+            for (var i = 0; i <= 11; i++) {
+
+                // variable pour chaque info sur les stades
+                var nameStadium = data.stadiums[i].name;
+                var cityStadium = data.stadiums[i].city;
+                var imgStadium = data.stadiums[i].image;
+                var latStadium = data.stadiums[i].lat;
+                var lngStadium = data.stadiums[i].lng;
+                var locStadium = "{ lat: " + latStadium + ",lng: " + lngStadium + "}";
+                // console.log(latStadium)
+                // console.log(lngStadium)
+                // console.log(locStadium)
+
+                $(".stades").append("<h4>" + nameStadium + "</h4>")
+                $(".stades").append("<img src=" + imgStadium + " class='w-25 '>")
+                $(".stades").append("<p class='p-3 lead'>" + cityStadium + "</p> </hr>")
+                $(".stades").append("  <button type='button' id='test" + i + "' data-toggle='modal' data-target='#exampleModalCenter'>voir plus </button>")
+            }
+            // console.log(nameStadium)
+            $("#test0").click(function () {
+              
+                geoloc({ lat: 55.715765, lng: 37.5515217 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+
+            $("#test1").click(function () {
+              geoloc(locStadium, nameStadium, imgStadium);
+                geoloc({ lat: 55.817765, lng: 37.440363 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+
+            $("#test2").click(function () {
+                
+                geoloc({ lat: 59.972740, lng: 30.221408 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+
+            $("#test3").click(function () {
+                
+                geoloc({ lat: 54.698157, lng: 20.533859 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+
+            $("#test4").click(function () {
+           
+                geoloc({ lat: 55.820983, lng: 49.160966 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+
+            $("#test5").click(function () {
+          
+                geoloc({ lat: 56.337287, lng: 43.963251}, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+            $("#test6").click(function () {
+              
+                geoloc({ lat: 53.278146, lng: 50.238854 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+            $("#test7").click(function () {
+              
+                geoloc({ lat: 48.734195, lng: 44.548345 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+            $("#test8").click(function () {
+           
+                geoloc({ lat: 54.181795, lng: 45.203851 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+            $("#test9").click(function () {
+        
+                geoloc({ lat: 47.209581, lng: 39.738424 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+            $("#test10").click(function () {
+              
+                geoloc({ lat: 43.402011, lng: 39.955709 }, 'Luzhniki Stadium', 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg');
+            })
+            $("#test11").click(function () {
+           
+                geoloc({ lat: 56.832490, lng: 60.573585 }, 'Kaliningrad Stadium', 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Kaliningrad_stadium_-_2018-04-07.jpg');
+            })
+            
+        });
+                // tmp = (Object) localStadium;
+                // tabGeoloc.push(locStadium);
+
+
+        // console.log(tabGeoloc)
+
+        // })
+
+    </script>
+</body>
+
+</html>

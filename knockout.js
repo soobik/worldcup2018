@@ -1,33 +1,43 @@
 var express = require('express');
 var router = express.Router();
+var fs = require('fs');
 
-var knockout = [
-    {
-        "round_16": {
-          "name": "Round of 16",
-          "matches": [
-            {
-              "name": 49,
-              "type": "qualified",
-              "home_team": "winner_a",
-              "away_team": "runner_b",
-              "home_result": null,
-              "away_result": null,
-              "home_penalty": null,
-              "away_penalty": null,
-              "winner": null,
-              "date": "2018-06-30T17:00:00+03:00",
-              "stadium": 11,
-              "finished": false,
-              "matchday": 4
-            }
-            ]
-        }    
-    }
-];
-
+/**
+ * Affiche tous les knockout
+ */
+function getKnockout(){
+    knockouts = fs.readFileSync(__dirname+"/datas/knockout.json");
+    knockout = JSON.parse(knockouts);
+    out = knockout;
+    console.log(out);
+    return out;
+}
+/**
+ * Affiche les knockout en fonction du round passer en parametre par url 
+ * exemple : http://localhost:3012/get_knockout/roud_16 ou 8 ou 4  ou 2
+ */
+function getKnockoutByRound(round){
+    knockout = getKnockout();
+    round = knockout.knockout[round];
+    console.log(round);
+    return round;
+}
+/**
+ * Route pour afficher tous les knockout
+ */
 router.get('/', function (req, res) { 
-    res.json(knockout);
+    var result = "";
+    result = getKnockout();
+    res.json(result);
  });
+/**
+ * Route pour affiche les knockout classé par round
+ */
+ router.get('/:round', function(req, res){
+    round = req.params.round
+    var result = "";
+    result = getKnockoutByRound(round);
+    res.json(result);
+ })
 
  module.exports = router;

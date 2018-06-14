@@ -50,8 +50,6 @@ $(document).ready(function() {
 
 function geoloc(coordonnees, nameStadium, imgStadium) {
     // console.log(uluru,nameStadium,imgStadium);
-    var newMap = document.createElement("div"); 
-    newMap.id 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: coordonnees
