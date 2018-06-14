@@ -6,16 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU7TrL1XhvGDzxUIwQHhDTYj6xsdRnhN0"></script>
     <!-- lien bootstrap  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <!-- lien jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
     <!-- lien script bootstrap  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -31,8 +29,8 @@
     <header class="container-fluid bg-primary">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo-2018.jpg" class="w-50 rounded">
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo-2018.jpg" class="rounded logo">
                 </a>
                 <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -41,8 +39,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active m-5">
-                            <a class="nav-link" href="#">Accueil
-                                <span class="sr-only">(current)</span>
+                            <a class="nav-link" href="/">Accueil
                             </a>
                         </li>
                         <!--  <li class="nav-item m-5">
@@ -52,10 +49,16 @@
                             <a class="nav-link" href="equipe">Equipes</a>
                         </li>
                         <li class="nav-item m-5">
-                            <a class="nav-link" href="match">Match</a>
+                            <a class="nav-link" href="match">Matchs</a>
                         </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="knockout">Knockout</a>
+                        </li>
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="stadiums">Stades</a>
+                        </li>
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="joueurs">Joueurs</a>
                         </li>
                     </ul>
                 </div>
@@ -65,12 +68,13 @@
 
     <main>
 
-        <div class=" row list-group text-center">
+        <div class=" row list-group text-center d-flex justify-content-center">
 
             <h2 class="text-center mt-5 text-danger mb-5 "> Liste des stades</h2>
 
-            <div class="container stades">
+            <div class="container d-flex justify-content-center ligne">
 
+                <ul class="stades list-group"> </ul>
 
             </div>
 
@@ -123,21 +127,27 @@
                 // tabNameStadium.push(imgStadium);
 
                 // integration dans la page html
-                $(".stades").append("<h4>" + nameStadium + "</h4>")
-                $(".stades").append("<img src=" + imgStadium + " class='w-25 '>")
-                $(".stades").append("<p class='p-3 lead'>" + cityStadium + "</p> </hr>")
+            
+                $(".stades").append("<li class='list-group-item'><h2>" + nameStadium + "</h2></li>")
+
+                $(".stades").append("<li class='list-group-item'> <img src=" + imgStadium + " class='w-25 ' </li>")
+
+                $(".stades").append("<li class='list-group-item'><p class='p-3 mb-0 lead'><span class='font-weight-bold'> Lieu : </span> " + cityStadium + "</p>  ")
 
                 //afficher dynamiquement les stades en récupérant les données grâce au bouton via dataset
-                $(".stades").append("  <button type='button' id='test" + i + "' data-toggle='modal' data-target='#exampleModalCenter' data-lat="+latStadium+" data-lng="+lngStadium+" data-imgstadium="+imgStadium+" data-namestadium="+nameStadium+">voir plus </button>")
+                $(".stades").append("  <button type='button' id='test" + i + "' data-toggle='modal' data-target='#exampleModalCenter' data-lat="+latStadium+" data-lng="+lngStadium+" data-imgstadium="+imgStadium+" data-namestadium="+nameStadium+" class='mb-3 mt-3 btn btn-primary w-50 mx-auto'>Voir emplacement "+nameStadium+"</button> </li>  </div> <hr> ")
+       
                 
                 
                 $("#test" + i).click(function (e) {
                     // parseFloat = transforme une chaîne de caractère en nombre
                     var locStadium = {lat:parseFloat(this.dataset.lat),lng:parseFloat(this.dataset.lng)};
-                   
+                    
+                    // $("#exampleModalLongTitle").append("<h4>" + this.dataset.nameStadium + "</h4>")
                    
                     geoloc(locStadium, this.dataset.namestadium, this.dataset.imgstadium);
                     console.log(this.dataset.imgstadium)
+                  
                 })
 
             }
