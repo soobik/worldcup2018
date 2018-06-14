@@ -11,25 +11,28 @@
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
- </head>
-  <body>
-      <!--HEADER-->
-      <!--Menu-->
+</head>
+
+<body>
+    <!--HEADER-->
+    <!--Menu-->
     <header class="container-fluid bg-primary">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
                 <a class="navbar-brand" href="/">
-                    <img src="img/logo-2018.jpg" class="rounded logo"></a>
+                    <img src="img/logo-2018.jpg" class="rounded logo">
+                </a>
                 <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active m-5">
+                        <li class="nav-item m-5">
                             <a class="nav-link" href="/">Accueil
                             </a>
                         </li>
@@ -37,13 +40,16 @@
                             <a class="nav-link" href="#">Groupes</a>
                         </li>-->
                         <li class="nav-item m-5">
-                            <a class="nav-link" href="equipe">Equipes</a>
+                            <a class="nav-link" href="equipe">Equipes
+                                <span class="sr-only">(current)</span>
+                            </a>
                         </li>
                         <li class="nav-item m-5">
-                            <a class="nav-link" href="match">Matchs</a>
+                            <a class="nav-link" href="match">Phase de groupes
+                            </a>
                         </li>
-                        <li class="nav-item m-5">
-                            <a class="nav-link" href="knockout">Knockout</a>
+                        <li class="nav-item active m-5">
+                            <a class="nav-link" href="knockout">Second tour</a>
                         </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="stadiums">Stades</a>
@@ -51,83 +57,86 @@
                         <li class="nav-item m-5">
                             <a class="nav-link" href="joueurs">Joueurs</a>
                         </li>
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="score">Classement par groupe</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!--MAIN--> 
+    <!--MAIN-->
     <main id="main">
-            <h3 class="title-knock text-center mt-5 ">KNOCKOUT</h3>
+        <h3 class="title-knock text-center mt-5 ">KNOCKOUT</h3>
 
-        <div class="container">     
-                
+        <div class="container">
+
             <div id="round_sixteen" class=" list-group">
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active mt-5">
-                    <div class=" w-100 mt-3" >
+                    <div class=" w-100 mt-3">
                         <h5 class="mb-1 " id="montest0"></h5>
                     </div>
                     <p class="mb-1">Details</p>
                 </a>
                 <!--Liste vide implémentée par le script-->
-  
+
             </div>
         </div>
         <div class="container">
-        
+
             <div id="round_eight" class=" list-group">
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active mt-5">
                     <div class=" w-100 mt-3">
-                        <h5 class="mb-1"id="montest1"></h5>
+                        <h5 class="mb-1" id="montest1"></h5>
                     </div>
                     <p class="mb-1">Details</p>
                 </a>
                 <!--Liste vide implémentée par le script-->
-        
+
             </div>
         </div>
         <div class="container">
-        
+
             <div id="round_four" class=" list-group">
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active mt-5">
                     <div class=" w-100 mt-3">
-                        <h5 class="mb-1"id="montest2"></h5>
+                        <h5 class="mb-1" id="montest2"></h5>
                     </div>
                     <p class="mb-1">Details</p>
                 </a>
                 <!--Liste vide implémentée par le script-->
-        
+
             </div>
         </div>
         <div class="container">
-        
+
             <div id="round_two_loser" class=" list-group">
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active mt-5">
                     <div class=" w-100 mt-3">
-                        <h5 class="mb-1"id="montest3"></h5>
+                        <h5 class="mb-1" id="montest3"></h5>
                     </div>
                     <p class="mb-1">Details</p>
                 </a>
                 <!--Liste vide implémentée par le script-->
-        
+
             </div>
         </div>
         <div class="container">
-        
+
             <div id="round_two" class=" list-group">
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active mt-5">
                     <div class=" w-100 mt-3">
-                        <h5 class="mb-1"id="montest4"></h5>
+                        <h5 class="mb-1" id="montest4"></h5>
                     </div>
                     <p class="mb-1">Details</p>
                 </a>
                 <!--Liste vide implémentée par le script-->
-        
+
             </div>
         </div>
-            
-        
+
+
     </main>
 
     <!--FOOTER-->
@@ -151,69 +160,71 @@
             </div>
         </div>
     </footer>
-      
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="services.js"></script>
     <script src="js/knockout-infos.js"></script>
-<script>
+    <script>
 
 
-    // $(document).ready(function () {
-    //     services("knockout", function (data) {
+        // $(document).ready(function () {
+        //     services("knockout", function (data) {
 
-    //         var r = data.knockout.round_16.matches;
-    //         for (var i = 0, c = r.length; i < c; i++) {
-    //             $('#date'+[i]).append(r[i].date);
-    //         }
-    //     });
-    // });
+        //         var r = data.knockout.round_16.matches;
+        //         for (var i = 0, c = r.length; i < c; i++) {
+        //             $('#date'+[i]).append(r[i].date);
+        //         }
+        //     });
+        // });
 
 
 
-// fonction qui implémente le lieu, la date, l'heure et les équipes
-$(document).ready(function () {
-        services("knockout", function (data) {    
-            var r = data.knockout.round_16.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+        // fonction qui implémente le lieu, la date, l'heure et les équipes
+        $(document).ready(function () {
+            services("knockout", function (data) {
+                var r = data.knockout.round_16.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
 
-            }
+                }
+            });
+
+            services("knockout", function (data) {
+                var r = data.knockout.round_8.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
+
+                }
+            });
+            services("knockout", function (data) {
+                var r = data.knockout.round_4.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
+
+                }
+            });
+            services("knockout", function (data) {
+                var r = data.knockout.round_2_loser.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
+
+                }
+            });
+            services("knockout", function (data) {
+                var r = data.knockout.round_2.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
+
+                }
+            });
         });
-
-        services("knockout", function (data) {    
-            var r = data.knockout.round_8.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
-
-            }
-        });
-        services("knockout", function (data) {    
-            var r = data.knockout.round_4.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
-
-            }
-        });
-        services("knockout", function (data) {    
-            var r = data.knockout.round_2_loser.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
-
-            }
-        });
-        services("knockout", function (data) {    
-            var r = data.knockout.round_2.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
-
-            }
-        });
-});
 
 
 // test
@@ -222,11 +233,11 @@ $(document).ready(function () {
 // $(document).ready(function () {
 //         services("knockout", function (data) {
 
-           
+
 //             var s = data.knockout;
 //             for (var i = 0, c = s.length; i < c; i++) {
 //                 $('.test').append('<div class="container test"><div id="round_sixteen" class=" list-group"><a href="#" class="list-group-item list-group-item-action active mt-5"><div class=" w-100 mt-3"><h5 class="mb-1">'+ s[i].round_16.name+'</h5></div></a></div>')
-                
+
 //             // var r = data.knockout.round_16.matches;
 //             // for (var i = 0, c = r.length; i < c; i++) {
 //             //     $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
@@ -244,10 +255,11 @@ $(document).ready(function () {
 
 
 
-</script>
+    </script>
 
 
 
 
 </body>
+
 </html>
