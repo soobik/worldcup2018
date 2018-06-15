@@ -10,12 +10,20 @@ function appel_modal(){
 
     console.log("dans le modal");
 
+    // function trierList (listJoueurs) {
+    //     listJoueurs.sort(function (a, b) {
+    //          return a.id - b.id;
+    //        });
+    // }
+    // var joueursTri = trierList (listJoueurs);
+
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:5002/get_joueurs',
+        url: 'http://localhost:3020/get_joueurs',
         success: function (listeJoueurs) {
             for (var i = 0; i < listeJoueurs.joueurs.length; i++) {
                 //recupere les joueurs
+                
                 var player = "";
                
                  if(listeJoueurs.joueurs[i] === 1){
