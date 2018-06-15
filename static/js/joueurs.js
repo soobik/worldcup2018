@@ -12,7 +12,7 @@ function appel_modal(){
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:5002/get_joueurs',
+        url: 'http://localhost:3007/get_joueurs',
         success: function (listeJoueurs) {
             for (var i = 0; i < listeJoueurs.joueurs.length; i++) {
                 //recupere les joueurs
