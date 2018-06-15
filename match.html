@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 
@@ -286,7 +285,11 @@
 
 
     $(document).ready(function () {
-
+        var equipes = [];
+        services("equipes", function (dataEquipe) {
+            dataEquipe.forEach(function(element) {
+                equipes.push(element);
+            });     
             //Affichage du nom du stade en fonction de l'id
             var stades = [];
             services("stadiums", function (data) {
@@ -295,18 +298,29 @@
                 });
 
 
-
                 services("groups", function (data) {
 
                     // Fonction qui push les valeurs du tableau matches de "groups.json" dans un nouveau tableau
                     var tableauMatch = [];
                     for (i in data.groups) {
-
                         for (j in data.groups[i].matches) {
                             tableauMatch.push(data.groups[i].matches[j]);
+
+                            //console.log(data.groups[i].matches);
                         };
+                        
+                        //console.log(data.groups);
                     }
 
+                    for (i in data.groups) {
+                         //  console.log("zzz",i.name);
+                        for (j in tableauMatch) {
+                        //   console.log("aaa",tableauMatch);
+                         tableauMatch[j].group = data.groups[i].name;
+                        }
+                    }
+
+                   console.log(tableauMatch);
                     // Classement des matches par ordre chronologique
                     tableauMatch.sort(function (a, b) {
                         return a.name - b.name;
@@ -320,17 +334,20 @@
                         var hours = d.getHours();
                         var day = d.getDate();
 
+
                         // Classement des matches par jour
 
                         for (j = 14; j < 29; j++) {
                             if (day == j) {
-                                $('#day_' + [j]).append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + date + " à " + hours + " h" + '</small></p>' + '<p><small>' + '</small></p><a class="text-dark" href="#"><small>' + stades[tableauMatch[i].stadium - 1].name + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + tableauMatch[i].home_team + " VS " + tableauMatch[i].away_team + '</p></div></div>')
+                              //  console.log("equipes =>",equipes[0].pays);
+                                $('#day_' + [j]).append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + date + " à " + hours + " h" + '</small></p>' + '<p><small>' +tableauMatch[i].group +'</small></p><a class="text-dark" href="#"><small>' + stades[tableauMatch[i].stadium - 1].name + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + equipes[tableauMatch[i].home_team-1].pays + " VS " + equipes[tableauMatch[i].away_team-1].pays + '</p></div></div>')
                             }
                         }
                     }
                 });
             });
         });
+     });
 
 
 
