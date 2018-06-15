@@ -1,9 +1,14 @@
 
 $(document).ready(function() {
-    
+    // $('#myModal').on('shown.bs.modal', function () {
+    //     $('#myInput').trigger('focus')
+    // })
+    var url = 'http://localhost:5002/';
+    var service_get_equipe = 'get_equipes';
+    var service_get_joueurs_ajax = 'joueurs_ajax';
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:5002/get_equipes',
+        url: url+service_get_equipe,
         success: function (listeEquipe) {
             for (var i = 0; i < listeEquipe.length; i++) {
                 console.log(listeEquipe);
@@ -21,7 +26,28 @@ $(document).ready(function() {
         },
         error: function (resultat, statut, erreur) {
 
-            alert('ERROR 404');
+            alert('ERROR 404 1');
         }
     });
+
+
+
+    $('#exampleModal').on('shown.bs.modal', function () {
+        // Remplis le modal avec nue liste de joueurs
+        // TODO : lier la bonne liste de joueurs
+        $.ajax({
+            type: 'GET',
+            url: url+service_get_joueurs_ajax,
+            success: function (data) {
+                $("#joueurs").empty();
+                $("#joueurs").append(data);
+                //console.log(data);
+                console.log("equipes.js get joueurs_ajax dans modal");
+            },
+            error: function (resultat, statut, erreur) {
+
+                alert('ERROR 404 2');
+            }
+        });
+    })
 });  
