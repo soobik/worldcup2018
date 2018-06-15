@@ -9,7 +9,6 @@ var router = express.Router();
 function getGroups() {
   groups = fs.readFileSync(__dirname + "/datas/groups.json");
   group = JSON.parse(groups);
-  console.log(group)
   return group;
 
 }
@@ -19,7 +18,6 @@ function getGroups() {
 function getGroupsLetter(lettre) {
   group = getGroups();
   groups = group.groups[lettre];
-  console.log(groups);
   return groups;
 }
 /**
@@ -38,7 +36,6 @@ router.get('/', function (req, res) {
  */
 router.get('/:lettre', function (req, res) {
   var lettre = req.params.lettre;
-  console.log(lettre)
   var result = "";
   result = getGroupsLetter(lettre);
   res.json(result);

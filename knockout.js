@@ -9,7 +9,6 @@ function getKnockout(){
     knockouts = fs.readFileSync(__dirname+"/datas/knockout.json");
     knockout = JSON.parse(knockouts);
     out = knockout;
-    console.log(out);
     return out;
 }
 /**
@@ -19,7 +18,6 @@ function getKnockout(){
 function getKnockoutByRound(round){
     knockout = getKnockout();
     round = knockout.knockout[round];
-    console.log(round);
     return round;
 }
 /**

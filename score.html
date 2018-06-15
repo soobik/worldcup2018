@@ -13,15 +13,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="services.js"></script>
+    
 </head>
 
 <body>
@@ -39,7 +31,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active m-5">
+                        <li class="nav-item  m-5">
                             <a class="nav-link" href="/">Accueil
                             </a>
                         </li>
@@ -62,7 +54,7 @@
                         <li class="nav-item m-5">
                             <a class="nav-link" href="joueurs">Joueurs</a>
                         </li>
-                        <li class="nav-item m-5">
+                        <li class="nav-item active m-5">
                             <a class="nav-link" href="score">Classement par groupe</a>
                         </li>
                     </ul>
@@ -81,75 +73,19 @@
             </div>
             <div class="row border mb-3 p-3">
                 <div class="container-fluid col-md-12">
-                        <!-- <ul id="groupeA" class="list-inline  text-center">
-                            <script>
-                                services("equipes", function (data) {
-                                    console.log(data);
-                                    id = 0;
-                                    for (var i = 0; i < 4; i++) {
-                                        id += 1
-                                        $('#groupeA').append('<li class="test list-inline-item  col-md-2 text-center">' + '<p>' + data[i].pays + '</p>' + '<img class="w-25" src ="' + data[i].flag + '">' + test + '</li>')
-                                    }
-                                })
-                                var test = services("groups", function (data) {
-                                        // console.log(data.groups.a.matches);
-                                        $(".test").append('<p>' + data.groups.a.matches[0].home_result + '</p>')
-                                        // for (var i = 0; i < 4; i++) {
-                                        // }
-                                    })
-                            </script>
-                        </ul> -->
-                        <h1>    
-                                {{#equipes}}
-                                {{pays}}
-                                {{flag}}
-                                {{/equipes}}
-                            <!-- {{equipes[0].flag}}
-                            {{classement}}  -->
-                        </h1>
-                        <table class="table bg-light">
-                            <thead>
-                              <tr>
-                                <th scope="col">equipe</th>
-                                <th scope ="col"></th>
-                                <th scope="col">Home Points</th>
-                                <th scope="col">Away Points</th>
-                                <th scope="col">Total</th>
-                              </tr>
-                            </thead>
-                            <tbody id = "tabA">
-                                <script>
-                                    services("equipes", function (data) {
-                                        console.log(data);
-                                        id = 0;
-                                        for (var i = 0; i < 4; i++) {
-                                            id += 1
-                                            $('#tabA').append('<tr><td>' + data[i].pays + '</td>' + '<td class="w-25"><img class="w-25 img-fluid" src ="' + data[i].flag + '">' + '</td></tr>')
-                                        }
-                                    })
-                                    services("groups", function (data) {
-                                        console.log(data.groups.a.matches[0]);
-                                        for (var i=0; i<4; i++){
-                                            $("#tabA").append('<td>' + data.groups.a.matches[i].home_result + " " + data.groups.a.matches[i].away_result + '</td>')
-                                        }
-                                    })
-                                </script>
-                              <!-- <tr>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr> -->
-                            </tbody>
-                          </table>
+                    <table class="table bg-light">
+                        <thead>
+                            <tr>
+                            <th scope="col">equipe</th>
+                            <th scope ="col"></th>
+                            <th scope="col">Home Points</th>
+                            <th scope="col">Away Points</th>
+                            <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id = "tabA">
+                        </tbody>
+                    </table>
                 </div>
 
             </div>
@@ -160,7 +96,19 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-
+                <table class="table bg-light">
+                    <thead>
+                        <tr>
+                        <th scope="col">equipe</th>
+                        <th scope ="col"></th>
+                        <th scope="col">Home Points</th>
+                        <th scope="col">Away Points</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "tabB">
+                    </tbody>
+                </table>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -168,7 +116,19 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-
+                <table class="table bg-light">
+                    <thead>
+                        <tr>
+                        <th scope="col">equipe</th>
+                        <th scope ="col"></th>
+                        <th scope="col">Home Points</th>
+                        <th scope="col">Away Points</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "tabC">
+                    </tbody>
+                </table>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -176,7 +136,19 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-
+                <table class="table bg-light">
+                    <thead>
+                        <tr>
+                        <th scope="col">equipe</th>
+                        <th scope ="col"></th>
+                        <th scope="col">Home Points</th>
+                        <th scope="col">Away Points</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "tabD">
+                    </tbody>
+                </table>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -184,7 +156,19 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-
+                <table class="table bg-light">
+                    <thead>
+                        <tr>
+                        <th scope="col">equipe</th>
+                        <th scope ="col"></th>
+                        <th scope="col">Home Points</th>
+                        <th scope="col">Away Points</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "tabE">
+                    </tbody>
+                </table>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -192,7 +176,19 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-
+                <table class="table bg-light">
+                    <thead>
+                        <tr>
+                        <th scope="col">equipe</th>
+                        <th scope ="col"></th>
+                        <th scope="col">Home Points</th>
+                        <th scope="col">Away Points</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "tabF">
+                    </tbody>
+                </table>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -200,7 +196,19 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-
+                <table class="table bg-light">
+                    <thead>
+                        <tr>
+                        <th scope="col">equipe</th>
+                        <th scope ="col"></th>
+                        <th scope="col">Home Points</th>
+                        <th scope="col">Away Points</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "tabG">
+                    </tbody>
+                </table>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -208,7 +216,19 @@
                 </div>
             </div>
             <div class="row border mb-3 p-3">
-
+                <table class="table bg-light">
+                    <thead>
+                        <tr>
+                        <th scope="col">equipe</th>
+                        <th scope ="col"></th>
+                        <th scope="col">Home Points</th>
+                        <th scope="col">Away Points</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "tabH">
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
@@ -234,6 +254,42 @@
             </div>
         </div>
     </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="services.js"></script>
+    <script>
+        services("equipes", function(data){
+            for (var i = 0; i < data.length; i++) {
+                if (i == 0 || i < 4)
+                    $('#tabA').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+                else if (i == 4 || i < 8)
+                    $('#tabB').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+                else if (i == 8 || i < 12)
+                    $('#tabC').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+                else if (i == 12 || i < 16)
+                    $('#tabD').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+                else if (i == 16 || i < 20)
+                    $('#tabE').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+                else if (i == 20 || i < 24)
+                    $('#tabF').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+                else if (i == 24 || i < 28)
+                    $('#tabG').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+                else if (i == 28 || i < 32)
+                    $('#tabH').append('<tr ><td class="w-25">' + data[i].pays +'</td>'+ '<td class="w-50">' + '<img class="w-25 img-fluid" src ="' + data[i].flag + '">'+'</td>' +'<td class="result">0</td> - <td>0</td></tr>')
+            }
+        })
+        services("groups", function(data){
+            for (var i=0; i<data.length;i++){
+
+                console.log(data[i])
+            }
+        }) 
+    </script>
 </body>
 
 </html>
