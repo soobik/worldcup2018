@@ -1,8 +1,10 @@
 
 $(document).ready(function() {
-    // $('#myModal').on('shown.bs.modal', function () {
-    //     $('#myInput').trigger('focus')
-    // })
+    // function trierList (listJoueurs) {
+    //     listJoueurs.sort(function (a, b) {
+    //          return a.id - b.id;
+    //        });
+    // }
     var url = 'http://localhost:5002/';
     var service_get_equipe = 'get_equipes';
     var service_get_joueurs_ajax = 'joueurs_ajax';
@@ -10,6 +12,7 @@ $(document).ready(function() {
         type: 'GET',
         url: url+service_get_equipe,
         success: function (listeEquipe) {
+            // trierList (listJoueurs);
             for (var i = 0; i < listeEquipe.length; i++) {
                 console.log(listeEquipe);
                 //recupere les joueurs
