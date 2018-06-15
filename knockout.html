@@ -183,27 +183,27 @@ $(document).ready(function () {
                 // affichage des 16ème de finale
                 var r = data.knockout.round_16.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small id="data_'+i+'">'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                    $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-white btn btn-primary" href="#"><small id="data_'+i+'">'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
                 // affichage des 8ème de finale
                 r = data.knockout.round_8.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                    $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-white btn btn-primary" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
                 // affichage des quarts de finale
                 r = data.knockout.round_4.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                    $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-white btn btn-primary" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
                 // affichage des demi-finale
                 r = data.knockout.round_2_loser.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                    $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-white btn btn-primary" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
                 // affichage de la finale
                 r = data.knockout.round_2.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                    $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-white btn btn-primary" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
             });
         })
