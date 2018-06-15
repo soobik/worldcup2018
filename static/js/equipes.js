@@ -1,15 +1,14 @@
 
 $(document).ready(function() {
-    // $('#myModal').on('shown.bs.modal', function () {
-    //     $('#myInput').trigger('focus')
-    // })
-    var url = 'http://localhost:5002/';
+     
+    var url = 'http://localhost:3007/';
     var service_get_equipe = 'get_equipes';
     var service_get_joueurs_ajax = 'joueurs_ajax';
     $.ajax({
         type: 'GET',
         url: url+service_get_equipe,
         success: function (listeEquipe) {
+            
             for (var i = 0; i < listeEquipe.length; i++) {
                 console.log(listeEquipe);
                 //recupere les joueurs

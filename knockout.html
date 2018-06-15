@@ -6,9 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet"> 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -54,9 +53,9 @@
                         <li class="nav-item m-5">
                             <a class="nav-link" href="stadiums">Stades</a>
                         </li>
-                        <li class="nav-item m-5">
+                        <!-- <li class="nav-item m-5">
                             <a class="nav-link" href="joueurs">Joueurs</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item m-5">
                             <a class="nav-link" href="score">Classement par groupe</a>
                         </li>
@@ -171,60 +170,73 @@
         crossorigin="anonymous"></script>
     <script src="services.js"></script>
     <script src="js/knockout-infos.js"></script>
-    <script>
-
-
-        // $(document).ready(function () {
-        //     services("knockout", function (data) {
-
-        //         var r = data.knockout.round_16.matches;
-        //         for (var i = 0, c = r.length; i < c; i++) {
-        //             $('#date'+[i]).append(r[i].date);
-        //         }
-        //     });
-        // });
-
-
-
-        // fonction qui implémente le lieu, la date, l'heure et les équipes
-        $(document).ready(function () {
-            services("knockout", function (data) {
+<script>
+// fonction qui implémente le lieu, la date, l'heure et les équipes
+$(document).ready(function () {
+        var stades =[];
+        services("stadiums", function (data) {
+            data.stadiums.forEach(function(element) {
+                stades.push(element);
+            });
+            
+            services("knockout", function (data) { 
+                // affichage des 16ème de finale
                 var r = data.knockout.round_16.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
-
+                    $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small id="data_'+i+'">'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
-            });
-
-            services("knockout", function (data) {
-                var r = data.knockout.round_8.matches;
+                // affichage des 8ème de finale
+                r = data.knockout.round_8.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
-
+                    $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
-            });
-            services("knockout", function (data) {
-                var r = data.knockout.round_4.matches;
+                // affichage des quarts de finale
+                r = data.knockout.round_4.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
-
+                    $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
-            });
-            services("knockout", function (data) {
-                var r = data.knockout.round_2_loser.matches;
+                // affichage des demi-finale
+                r = data.knockout.round_2_loser.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
-
+                    $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
-            });
-            services("knockout", function (data) {
-                var r = data.knockout.round_2.matches;
+                // affichage de la finale
+                r = data.knockout.round_2.matches;
                 for (var i = 0, c = r.length; i < c; i++) {
-                    $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + r[i].date + '</small></p>' + '<a class="text-dark" href="#"><small>' + r[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + r[i].home_team + " VS " + r[i].away_team + '</p></div></div>')
-
+                    $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
                 }
             });
-        });
+        })
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_8.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+        //     }
+        // });
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_4.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+
+        //     }
+        // });
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_2_loser.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+
+        //     }
+        // });
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_2.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+
+        //     }
+        // });
+        
+});
+
 
 
 // test
