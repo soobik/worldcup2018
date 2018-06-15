@@ -5,7 +5,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,15 +28,16 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active m-5">
+                        <li class="nav-item m-5">
                             <a class="nav-link" href="/">Accueil
                             </a>
                         </li>
                         <!--  <li class="nav-item m-5">
                             <a class="nav-link" href="#">Groupes</a>
                         </li>-->
-                        <li class="nav-item m-5">
-                            <a class="nav-link" href="equipe">Equipes</a>
+                        <li class="nav-item active m-5">
+                            <a class="nav-link" href="equipe">Equipes
+                            <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="match">Phase de groupes
@@ -60,61 +63,26 @@
       <!--MAIN--> 
     <main>
         <section class="container">
-            <div class="row mt-5"> <!--Ligne 1-->
-                <article class="col-md-3 col-sm-12 p-5 bg-primary text-white">
-                    <h3>Argentine</h3>
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <h3>Australie</h3>
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <h3>Belgique</h3>
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <h3>Brésil</h3>
-                </article>
-            </div>
-            <div class="row mt-5"> <!--Ligne 2-->
-                <article class="col-md-3 col-sm-12">
-                    <h3>Colombie</h3>
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <h3>Costa rica</h3>
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <h3>Croatie</h3>
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <h3>Danemark</h3>
-                </article>
-            </div>
-            <div class="row mt-5"> <!--Ligne 3-->
-                <article class="col-md-3 col-sm-12">
-                    <!-- equipe-->
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- equipe-->
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- equipe-->
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- equipe-->
-                </article>
-            </div>
-            <div class="row mt-5"> <!--Ligne 4-->
-                <article class="col-md-3 col-sm-12">
-                    <!--  equipe  -->
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- equipe--><div class="container"></div>
-                </article>
-                <article class="co            <p>&copy 2018</p></div>ol-sm-12">
-                    <!-- equipe-->        </div></div>
-                </article>
-                <article class="col-md-3 col-sm-12">
-                    <!-- equipe-->
-                </article>
+            <div class="row mt-5 justify-content-center" id="liste_equipe"> <!--Ligne 1-->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="joueurs">
+                                
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -144,8 +112,11 @@
             <p>&copy 2018</p>
         </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    <script src="services.js"></script>
+    <script src="js/equipes.js"></script> 
+    <script src="js/joueurs.js"></script>
+</body>
 </html>
