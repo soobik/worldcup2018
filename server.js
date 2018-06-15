@@ -7,11 +7,7 @@ var parser = require('json-parser');
 var fs = require('fs');
 var port = require('./port.js');
 var route = require('./routes/routes.js')
-var mustacheExpress = require('mustache-express');
-var path = require('path');
 
-app.engine('html', mustacheExpress());
-app.set('view engine', 'mustache');
 app.set('views', __dirname + '/');
 app.use(express.static('static'));
 app.use(route);
@@ -60,13 +56,7 @@ app.get('/knockout', function(req, res){
  */
 
 app.get('/score', function(req, res){
-    // res.sendFile(__dirname+'/score.html');
-    var equipe = getEquipes();
-    // var classe = classement();
-    res.render('score.html', {
-        equipes: equipe
-        // classement: classe
-    });
+    res.sendFile(__dirname+'/score.html');
 })
 /**
  * Route vers stadium.json
@@ -82,26 +72,9 @@ app.get('/get_all_groups', function(req, res){
 });
 
 /**
- * Route vers date du match
- */
-
-/**
  * Port d'écoute du serveur
  */
 app.listen(port, function(){
     console.log('server ON');
 })
 
-function classement () {
-    var obj = fs.readFileSync(__dirname+'/datas/groups.json');
-    var object = JSON.parse(obj);
-    console.log(object.groups.a.matches[0].home_result);
-    return object;
-}
-
-function getEquipes () {
-    var obj = fs.readFileSync(__dirname + '/datas/equipes.json');
-    var object = JSON.parse(obj);
-    console.log(object[0].pays);
-    return object
-}
