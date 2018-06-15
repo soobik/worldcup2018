@@ -5,7 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Merriweather+Sans" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet"> 
 
@@ -39,16 +38,20 @@
                             <a class="nav-link" href="equipe">Equipes</a>
                         </li>
                         <li class="nav-item m-5">
-                            <a class="nav-link" href="match">Matchs</a>
+                            <a class="nav-link" href="match">Phase de groupes
+                            </a>
                         </li>
                         <li class="nav-item m-5">
-                            <a class="nav-link" href="knockout">Knockout</a>
+                            <a class="nav-link" href="knockout">Second tour</a>
                         </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="stadiums">Stades</a>
                         </li>
                         <li class="nav-item m-5">
                             <a class="nav-link" href="joueurs">Joueurs</a>
+                        </li>
+                        <li class="nav-item m-5">
+                            <a class="nav-link" href="score">Classement par groupe</a>
                         </li>
                     </ul>
                 </div>
@@ -171,47 +174,99 @@
     //     });
     // });
 
+// var nomStade="";
+// function NameStadium (nb,data){
+//       //  console.log("in ", data.stadiums[nb-1].name);
+//         nomStade = data;
+//         return nomStade;
+// }
+
+// function getNameStadium (nb,cb){
+//     services("stadiums", function (data) { 
+//        // console.log("in get ", data.stadiums[nb-1].name);
+//         reponse = data;
+//         cb(nb,data);
+//     });
+// }
+//getNameStadium(nb, NameStadium);
+
+
+//   services("stadiums", function (data) { 
+//        // console.log("in ", data.stadiums[nb-1].name);
+//         nomStade = data.stadiums[nb-1].name;
+//         return nomStade;
+//     });
+
+
+
 
 
 // fonction qui implémente le lieu, la date, l'heure et les équipes
 $(document).ready(function () {
-        services("knockout", function (data) {    
-            var r = data.knockout.round_16.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+        var stades =[];
+        services("stadiums", function (data) {
+            data.stadiums.forEach(function(element) {
+                stades.push(element);
+            });
+            
+            services("knockout", function (data) { 
+                // affichage des 16ème de finale
+                var r = data.knockout.round_16.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_sixteen').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small id="data_'+i+'">'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                }
+                // affichage des 8ème de finale
+                r = data.knockout.round_8.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                }
+                // affichage des quarts de finale
+                r = data.knockout.round_4.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                }
+                // affichage des demi-finale
+                r = data.knockout.round_2_loser.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                }
+                // affichage de la finale
+                r = data.knockout.round_2.matches;
+                for (var i = 0, c = r.length; i < c; i++) {
+                    $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+stades[r[i].stadium-1].name+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+                }
+            });
+        })
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_8.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+        //     }
+        // });
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_4.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
 
-            }
-        });
+        //     }
+        // });
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_2_loser.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
 
-        services("knockout", function (data) {    
-            var r = data.knockout.round_8.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_eight').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
+        //     }
+        // });
+        // services("knockout", function (data) {    
+        //     var r = data.knockout.round_2.matches;
+        //     for (var i = 0, c = r.length; i < c; i++) {
+        //         $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
 
-            }
-        });
-        services("knockout", function (data) {    
-            var r = data.knockout.round_4.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_four').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
-
-            }
-        });
-        services("knockout", function (data) {    
-            var r = data.knockout.round_2_loser.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_two_loser').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
-
-            }
-        });
-        services("knockout", function (data) {    
-            var r = data.knockout.round_2.matches;
-            for (var i = 0, c = r.length; i < c; i++) {
-                $('#round_two').append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>'+r[i].date + '</small></p>'+ '<a class="text-dark" href="#"><small>'+r[i].stadium+'</small></a></div>'+ '<div class="col-lg-8 text-center align-self-center"><p>'+r[i].home_team+" VS "+r[i].away_team+ '</p></div></div>')
-
-            }
-        });
+        //     }
+        // });
+        
 });
+
 
 
 // test

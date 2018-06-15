@@ -38,7 +38,7 @@ router.get('/', function (req, res) {
  */
 router.get('/:lettre', function (req, res) {
   var lettre = req.params.lettre;
-  console.log(lettre)
+  //console.log(lettre)
   var result = "";
   result = getGroupsLetter(lettre);
   res.json(result);

@@ -22,6 +22,19 @@ function getKnockoutByRound(round){
     console.log(round);
     return round;
 }
+
+function getKnockoutStadiumById(id){
+    knockouts = fs.readFileSync(__dirname+"/datas/knockout.json");
+    console.log(knockouts);
+    return knockouts;
+}
+router.get('/get_knockoutstadium/:id', function(req, res){
+    id = req.params.id;
+    var result = "";
+    result = getKnockoutStadiumById(id);
+    console.log(result);
+    res.json(result);
+});
 /**
  * Route pour afficher tous les knockout
  */
