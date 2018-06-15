@@ -285,64 +285,54 @@
 <script>
 
 
-$(document).ready(function () {
-        services("groups", function (data) {
+    $(document).ready(function () {
 
-// Fonction qui push les valeurs du tableau matches de "groups.json" dans un nouveau tableau
-            var tableauMatch = [];
-            for (i in data.groups) {
-                
-                for (j in data.groups[i].matches) {
-                    tableauMatch.push(data.groups[i].matches[j]);
-                };
-            }
-            
-// Classement des matches par ordre chronologique
-            tableauMatch.sort(function (a, b) {
-                return a.name - b.name;
+            //Affichage du nom du stade en fonction de l'id
+            var stades = [];
+            services("stadiums", function (data) {
+                data.stadiums.forEach(function (element) {
+                    stades.push(element);
+                });
+
+
+
+                services("groups", function (data) {
+
+                    // Fonction qui push les valeurs du tableau matches de "groups.json" dans un nouveau tableau
+                    var tableauMatch = [];
+                    for (i in data.groups) {
+
+                        for (j in data.groups[i].matches) {
+                            tableauMatch.push(data.groups[i].matches[j]);
+                        };
+                    }
+
+                    // Classement des matches par ordre chronologique
+                    tableauMatch.sort(function (a, b) {
+                        return a.name - b.name;
+                    });
+
+
+                    for (var i = 0, c = tableauMatch.length; i < c; i++) {
+                        // Mise en forme de la date et affichage de l'heure
+                        var d = new Date(tableauMatch[i].date);
+                        var date = d.toLocaleDateString();
+                        var hours = d.getHours();
+                        var day = d.getDate();
+
+                        // Classement des matches par jour
+
+                        for (j = 14; j < 29; j++) {
+                            if (day == j) {
+                                $('#day_' + [j]).append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + date + " à " + hours + " h" + '</small></p>' + '<p><small>' + '</small></p><a class="text-dark" href="#"><small>' + stades[tableauMatch[i].stadium - 1].name + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + tableauMatch[i].home_team + " VS " + tableauMatch[i].away_team + '</p></div></div>')
+                            }
+                        }
+                    }
+                });
             });
-        
-
-        for (var i = 0, c = tableauMatch.length; i < c; i++) {
-// Mise en forme de la date et affichage de l'heure
-            var d = new Date(tableauMatch[i].date);
-            var date = d.toLocaleDateString();
-            var hours = d.getHours();
-            var day = d.getDate();
-
-// Classement des matches par jour
-
-            for (j = 14; j < 29; j++) {
-                if (day == j) {
-                    $('#day_' + [j]).append('<div class="list-group-item mx-0"><div class="row"><div class="col-lg-4"><p><small>' + date + " à " + hours + " h" + '</small></p>' + '<p><small>' + '</small></p><a class="text-dark" href="#"><small>' + tableauMatch[i].stadium + '</small></a></div>' + '<div class="col-lg-8 text-center align-self-center"><p>' + tableauMatch[i].home_team + " VS " + tableauMatch[i].away_team + '</p></div></div>')
-                }
-            }
-        }
-    });
-});
+        });
 
 
-
-
-// Récupère le nom des groupes (à revoir)
-            // var groupsName = [];
-            // for (i in data.groups) {
-            //     //for (j in data.groups[i].name) {
-            //     groupsName.push(data.groups[i].name);
-            //     console.log(groupsName)
-            // }
-
-
-            // console.log(tableauMatch);
-
-// var group = '';
-//     if (tableauMatch.name == 1 || 2 || 17 || 18 || 33 || 34) {
-//         group = "Groupe A";
-//     } else if (tableauMatch.name == 3 || 4 || 19 || 20 || 35 || 36) {
-//         group = "Groupe B";
-//     }else {
-//         group = "groupe =z";
-//     }
 
 </script>
 
