@@ -71,6 +71,9 @@ app.get('/get_all_groups', function(req, res){
     res.sendFile(__dirname + '/datas/groups.json');
 });
 
+app.get('/joueurs_ajax', function(req, res){
+    res.sendFile(__dirname + '/joueurs_ajax.html');
+});
 /**
  * Port d'écoute du serveur
  */
